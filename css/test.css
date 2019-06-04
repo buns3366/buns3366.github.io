@@ -1,0 +1,24 @@
+.t1{
+  font-size: 54px;
+  color: red;
+}
+
+.t2{
+  color: blue;
+}
+
+#t3{
+  color: orange;
+}
+
+.box1{
+  background-color: orange;
+  width: 30px;
+  height: 30px;
+}
+
+.box2{
+  background-color: red;
+  width: 30px;
+  height: 30px;
+}
