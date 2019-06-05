@@ -1,0 +1,175 @@
+/* ----------------------------------
+  1. .xxx後，直接斷行即可填入內容，不用大括號{}，但下一行要縮排一次。
+  2. 每個屬性後面不用加分號「；」。
+  3. sass的樣式，冒號後面記得要空一格。
+  ----------------------------------*/
+
+
+
+/*----------------------------------
+  從屬關係：可以用「&」表示從屬關係：
+  .xxx h2在sass中，.xxx（母）與h2（子），h2可以直接加在.xxx的屬性中，直接寫入&h2(縮排一次）
+  再換行+縮排寫入該樣式的屬性（縮排兩次）即可。
+  ----------------------------------
+  .xxx
+    填寫xxx的樣式
+
+   & h1
+     填寫h1的樣式
+   &:hover
+     填寫 滑鼠移到xxx區塊後，xxx的樣式。(注意，:hover前不可以有空格)
+
+      & h1, & h2
+        填寫滑鼠移到aaa區塊後，h1,h1的樣式
+  ----------------------------------*/
+
+.aaa
+  display: inline-block
+  background-color: blue
+  padding: 10px
+  margin: 20px
+
+  & h1
+    color: red
+
+  &:hover
+    background-color: deepskyblue
+
+    & h1, & h2
+      color: green
+
+/*----------------------------------
+  「$」可以寫單一樣式的變數， 變數可以設定在sass的前幾行，包含顏色、尺寸、特定內容
+  - $xxx: #fff，後續要帶入此顏色的地方都可以直接打上「$xxx」即可。
+  ----------------------------------*/
+$w1: 300px
+$h1: 200px
+$color1: pink
+
+.pink
+  width: $w1
+  height: $h1
+  background-color: $color1
+
+/*----------------------------------
+  「@mixin」寫模組化的class，後面加上「class名稱」，再寫上屬性，
+  使用時，用「+class名稱」，即可將該變數的屬性加入CSS任一屬性中。
+  ----------------------------------
+  @mixin xxx
+    color: red
+  ----------------------------------*/
+@mixin b1
+  color: red
+  background-color: green
+
+.bbb
+  font-size: 12px
+  +b1
+
+/*----------------------------------
+  「@mixin」，後面可加上「（$a, $b）」等變數，再將變數取代屬性的值，即視為該屬性的「預設值」。
+   套用時，直接在CSS屬性中，加入「+xxx(red, 70px)」，即等同於加上「color: red」與「width:70px」屬性。
+  ----------------------------------
+  @mixin xxx （$a: green, $b:50px）
+    color: $a
+    width: $b
+    ----------------------------------*/
+@mixin c1 ($c11: green, $c12:50px )
+  background-color: $c11
+  width: $c12
+
+.ccc
+  font-size: 12px
+  +c1(red,800px)
+
+
+/*----------------------------------
+  常用變數($)參考
+  ----------------------------------
+//COLOR VARIABLE 定義顏色變數
+  $color_blue: #025370
+
+//BASE SIZ 設定框線粗細
+  $base_line_width: 5px
+
+//BREAK WIDTH 設定RWD
+  $break_large: 1024px
+  $break_medium 1024px
+  $break_small: 1024px
+
+//FONT SETTING 設定文字、h1~h6、p
+  $font-family: Arial,  微軟正黑體
+  $font-size-h1: 32px
+  $font-size-h2: 28px
+  $font-size-h3: 24px
+  $font-size-h4: 20px
+  $font-size-h5: 16px
+  $font-size-h6: 14px
+  $font-size-p: 12px
+
+//設定網頁內容呈現最大寬度的變數，超過則用背景填入
+  $max_content_width: 768px
+
+  ----------------------------------*/
+
+
+
+/*----------------------------------
+  常用變數模組(@mixin)參考
+  ----------------------------------
+//設定尺寸
+  @mixin size($w, $h)
+    width: $w
+    height: $h
+
+//設定物件可設定為絕對定位(依上層元素)
+  @mixin indep
+    position: absolute
+
+//設定垂直+水平置中
+  @mixin center
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+
+//處理動畫效果
+  @mixin trans($s)
+    transition:  $s
+
+//依照上層元件填滿尺寸
+  @mixin fill
+    width: 100%
+    height: 100%
+
+//設定字體
+  @mixin text($size,  $spacing,  $color)
+    font-size:  $size
+    letter-space:  $spacing
+    color:  $color
+
+  ----------------------------------*/
+
+
+
+/*----------------------------------
+  SASS常用CSS初始設定參考(搭配上方變數與變數模組使用)
+  ----------------------------------
+//全站設定，含：物件框線(設定好物件後可刪除)、字體、物件可偏移
+  *
+    border: solid 1px black
+    font-family:  $font-family
+    positon: relative
+
+//將網頁邊距歸0
+  html, body
+    margin: 0px
+    padding: 0px
+
+//設定網頁內容呈現最大寬度，內容置中，其他超過範圍的用背景填入
+  .max_width
+    max-width: $max_content_width
+    margin-left:auto
+    margin-right: auto
+
+  ----------------------------------*/
