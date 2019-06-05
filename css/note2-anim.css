@@ -15,11 +15,11 @@
   background-color: #cccccc;
 }
 
-.aaa:hover{
+.ab:hover .aaa{
   background-color: red;
 }
 
-.aaa:hover .bbb{
+.ab:hover .bbb{
   background-color: green;
 }
 
