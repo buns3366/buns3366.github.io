@@ -3,6 +3,7 @@
   下面範例
   1. 當滑鼠移到aaa區塊時，aaa區塊顏色改為紅色
   2. 當滑鼠移到aaa區塊時，bbb區塊顏色改為綠色
+  (注意階層)
 ==========================================*/
 .aaa, .bbb{
   position: relative;
@@ -15,11 +16,11 @@
   background-color: #cccccc;
 }
 
-.ab:hover .aaa{
+.aaa:hover{
   background-color: red;
 }
 
-.ab:hover .bbb{
+.aaa:hover+ .bbb{
   background-color: green;
 }
 
