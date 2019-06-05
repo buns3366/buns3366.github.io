@@ -1,0 +1,32 @@
+/* ==========================================
+:hover：滑鼠移至區塊時的顯示。class名稱後方加上「:hover」
+  下面範例
+  1. 當滑鼠移到aaa區塊時，aaa區塊顏色改為紅色
+  2. 當滑鼠移到aaa區塊時，bbb區塊顏色改為綠色
+==========================================*/
+.aaa, .bbb{
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  border: solid 1px #000000;
+  padding: 20px;
+  margin-left: 10px;
+  background-color: #cccccc;
+}
+
+.aaa:hover{
+  background-color: red;
+}
+
+.aaa:hover .bbb{
+  background-color: green;
+}
+
+/* ==========================================
+:active：滑鼠點選區塊時的顯示。class名稱後方加上「:active」
+  下面範例，當滑鼠點選 aaa區塊時，aaa區塊顏色改為藍色
+==========================================*/
+.aaa:active{
+    background-color: blue;
+  }
