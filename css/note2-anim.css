@@ -40,6 +40,7 @@ cursor：設定滑鼠樣式。
   display: inline-block;
   padding: 20px;
   margin-left: 10px;
+  margin-bottom: 20px;
   background-color: #efefef;
   cursor: pointer;
 }
@@ -70,6 +71,9 @@ transform：物件位移、旋轉、放大縮小、傾斜
 - transform-origen: 50% 100%; 物件的座標原點往右移本身寬度的50%、往下移本身高度的100%
                      center buttom; 表示由中下方作為原點進行動作。
 ==========================================*/
+.section{
+  margin-bottom: 20px;
+}
 
 .section::after{
   content: "";
