@@ -55,6 +55,7 @@ position：控制元件在網頁中的位置。
 - position: static;  自動排列下來且不可移動。(預設)
 - position: relative;  會自動排列下去且可調整偏移。
 - position: absolute;  上層元素絕對定位，在上層元素中相對位置（static的元素除外），可以重疊在其他元件。
+    >可加上 z-index:1; (代表Z軸，數值越大圖層越前面)
 - position: fixed;  視窗絕對定位，不會隨捲軸滾動。
 ---------------------------------------------
 display：設定元件的排列方式
