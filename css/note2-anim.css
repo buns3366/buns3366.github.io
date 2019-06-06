@@ -2,8 +2,13 @@
   font-size: 14px;
   font-family: 微軟正黑體,Arial;
   position: relative;
+  background: #666;
 }
 
+h1{
+  font-size: 16px;
+  color: #FFFFFF;
+}
 /* ==========================================
 cursor：設定滑鼠樣式。
 -  cursor: pointer; 滑鼠移置區塊上時，滑鼠樣式為「手指」。
@@ -12,7 +17,7 @@ cursor：設定滑鼠樣式。
 
 
 /* ==========================================
-:hover：滑鼠移至區塊時的顯示。class名稱後方加上「:hover」
+偽類「:hover」：滑鼠移至區塊時的顯示。class名稱後方加上「:hover」
   下面範例
   1. 當滑鼠移到aaa區塊時，aaa區塊顏色改為紅色
   2. 當滑鼠移到aaa區塊時，bbb區塊顏色改為綠色
@@ -35,7 +40,7 @@ cursor：設定滑鼠樣式。
   display: inline-block;
   padding: 20px;
   margin-left: 10px;
-  background-color: #cccccc;
+  background-color: #efefef;
   cursor: pointer;
 }
 
@@ -44,11 +49,11 @@ cursor：設定滑鼠樣式。
 }
 
 .aaa:hover+ .bbb{
-  background-color: green;
+  background-color: chartreuse;
 }
 
 /* ==========================================
-:active：滑鼠點選區塊時的顯示。class名稱後方加上「:active」
+偽類「:active」：滑鼠點選區塊時的顯示。class名稱後方加上「:active」
   下面範例，當滑鼠點選 aaa區塊時，aaa區塊顏色改為藍色
 ==========================================*/
 .aaa:active{
@@ -65,6 +70,12 @@ transform：物件位移、旋轉、放大縮小、傾斜
 - transform-origen: 50% 100%; 物件的座標原點往右移本身寬度的50%、往下移本身高度的100%
                      center buttom; 表示由中下方作為原點進行動作。
 ==========================================*/
+
+.section::after{
+  content: "";
+  display: block;
+  clear: both;
+}
 
 .transform{
   float: left;
@@ -94,6 +105,7 @@ transform：物件位移、旋轉、放大縮小、傾斜
   left: 75px;
   width: 50px;
   height: 50px;
+  background-color: rgba(0,0,0,0);
   border: dashed 1px orange;
 }
 
@@ -121,4 +133,122 @@ transform：物件位移、旋轉、放大縮小、傾斜
   transform-origen: 50% 100%;
 }
 
+/*==========================================
+滑鼠操作動畫設定
+------------------------------------------
+transition-duration：動作持續時間，指區塊內的動畫於指定秒數內漸變完成。
+  - transition-duration: 1s; 如有hover或active等動作，會延展到1秒內慢慢漸變完成顯示
+  例：hover時寬度由5px瞬間變為10px，加上後會慢慢在一秒內從5px延展為10px。
+------------------------------------------
+transition-deley：動作延遲時間，指區塊內的動畫會延遲指定秒數後才開始播放。
+  - transition-deley: 1s; 如有hover或active等動作，會延遲1秒後才執行。
+  例：hover時寬度由5px瞬間變為10px，加上後會在一秒後才從5px變為10px。
+==========================================*/
+
+.btn1 {
+  float: left;
+  width: 150px;
+  height: 150px;
+  border: solid 1px #FFF;
+  margin-bottom: 30px;
+  background-color: #46CAB3;
+  transition-duration: 0.35s;
+  cursor: pointer;
+}
+.btn1 .line1, .btn1 .line2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110px;
+  height: 6px;
+  border: solid 1px #FFF;
+  background-color: #FFF;
+
+  transform: translateX(-50%) translateY(-50%);
+  transition-duration: 0.3s;
+}
+.btn1 .line1 {
+  transform: translateX(-50%) translateY(-250%);
+}
+.btn1 .line2 {
+  transform: translateX(-50%) translateY(200%);
+}
+.btn1:hover {
+  background-color: #209797;
+}
+.btn1:hover .line1 {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg) scaleX(1.2);
+}
+.btn1:hover .line2 {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg) scaleX(1.2);
+}
+
+.block {
+  float: left;
+  width: 600px;
+  height: auto;
+  padding: 30px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border: solid 2px #FFF;
+}
+.block .pre {
+  position: absolute;
+  top: 30px;
+  font-size: 22.5px;
+  color: #FFF;
+}
+.block .name {
+  top: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #FFF;
+  opacity: 0;
+  transition-duration: 0.7s;
+}
+.block .about {
+  font-size: 15px;
+  color: #FFF;
+  opacity: 0;
+  transition-duration: 0.6s;
+  transition-delay: 0.2s;
+  top: 30px;
+}
+.block:hover .name, .block:hover .about {
+  opacity: 1;
+  top: 0px;
+}
+.block:hover .pre {
+  opacity: 0;
+}
+
+/*==========================================
+動畫影格設定
+------------------------------------------
+@keyframes：設定動畫影格，可設定不同進度(%)時，CSS如何改變
+  -  @keyframes aaa
+        0%
+            bottom: 100px
+        50%
+              bottom: 0px
+        100%
+            bottom: 100px
+------------------------------------------
+animation：套用動畫影格 @keyframes 時，加於物件上。
+  - animation: aaa 2s infinite; 動畫名稱、影格執行秒數、無限循環
+  - animation: aaa 2s 5;  動畫名稱、影格執行秒數、動畫播放5次
+------------------------------------------
+animation-delay：延遲播放動畫
+  - animation-delay:  2s; 前一個動畫播放開始，延遲2秒後播放本動畫
+------------------------------------------
+animation-timimg-function：動畫速度曲線
+  - animation-timimg-function: linear; 0~100%都是相同速度。
+  - animation-timimg-function: easse-in; 預設，開頭慢。
+  - animation-timimg-function:   easse-out; 結尾慢。
+  - animation-timimg-function: steps(5); 表示0~100%，切分成5個畫面定格顯示，而非平滑漸變顯示。
+   --可參考不同動畫取線網站： https://easings.net/
+   --可自行設定動畫速度的貝茲取線(自行研究)。
+==========================================*/
 

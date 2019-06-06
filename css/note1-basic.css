@@ -357,7 +357,7 @@ clear：清除指定區塊左右兩邊的浮動區塊。
 3. clearfix：最常使用。父元素加上一個class「clearfix」，填入CSS「clear:both;」，如下：
   clearfix::after｛
     content: "";
-    display: blok;
+    display: block;
     clear: both;
   ｝
   (clear:both;，表示清除float-left與float-right屬性的影響。)
