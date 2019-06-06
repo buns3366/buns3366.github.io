@@ -19,7 +19,7 @@
 :hover、:active說明
 ====================================================-->
   <h1>:hover 滑鼠移至、:active 滑鼠點擊效果</h1>
-  <div class="ab">
+  <div class="section1">
     <div class="aaa">A按鈕</div>
     <div class="bbb">B按鈕</div>
   </div>
@@ -28,7 +28,7 @@
 transform說明
 ====================================================-->
   <h1>transform：物件位移、旋轉、放大縮小、傾斜</h1>
-  <div class="section">
+  <div class="section2 clearfix">
     <div class="transform">
       <p>原始狀態<br>(座標原點為中心點)</p>
       <div class="transform-item"></div>
@@ -78,22 +78,35 @@ transform說明
 滑鼠操作動畫說明
 ====================================================-->
   <h1>滑鼠操作動畫</h1>
-  <div class="btn1">
-    <div class="line1"></div>
-    <div class="line2"></div>
+  <div class="section3 clearfix">
+    <div class="btn1">
+      <div class="line1"></div>
+      <div class="line2"></div>
+    </div>
+    <div class="block clearfix">
+      <div class="pre">點我示範</div>
+      <div class="name">關於滑鼠操作動畫</div>
+      <div class="about">transition-duration：動作持續時間，指區塊內的動畫於指定秒數內漸變完成。<br>
+        - transition-duration: 1s; 如有hover或active等動作，會延展到1秒內慢慢漸變完成顯示<br>
+        例：hover時寬度由5px瞬間變為10px，加上後會慢慢在一秒內從5px延展為10px。<br>
+        ------------------------------------------<br>
+        transition-deley：動作延遲時間，指區塊內的動畫會延遲指定秒數後才開始播放。<br>
+        - transition-deley: 1s; 如有hover或active等動作，會延遲1秒後才執行。<br>
+        例：hover時寬度由5px瞬間變為10px，加上後會在一秒後才從5px變為10px。</div>
+    </div>
   </div>
-  <div class="block">
-    <div class="pre">點我示範</div>
-    <div class="name">關於滑鼠操作動畫</div>
-    <div class="about">transition-duration：動作持續時間，指區塊內的動畫於指定秒數內漸變完成。<br>
-      - transition-duration: 1s; 如有hover或active等動作，會延展到1秒內慢慢漸變完成顯示<br>
-      例：hover時寬度由5px瞬間變為10px，加上後會慢慢在一秒內從5px延展為10px。<br>
-      ------------------------------------------<br>
-      transition-deley：動作延遲時間，指區塊內的動畫會延遲指定秒數後才開始播放。<br>
-      - transition-deley: 1s; 如有hover或active等動作，會延遲1秒後才執行。<br>
-      例：hover時寬度由5px瞬間變為10px，加上後會在一秒後才從5px變為10px。</div>
+  <hr>
+  <!--====================================================
+  影格動畫說明
+  ====================================================-->
+  <h1>影格動畫</h1>
+  <div class="section4">
+    <div class="animbox a1"></div>
+    <div class="animbox a2"></div>
+    <div class="animbox a3"></div>
+    <div class="animbox a4"></div>
+    <div class="animbox a5"></div>
   </div>
-
 </body>
 
 </html>
