@@ -65,15 +65,26 @@ display：設定元件的排列方式
 -  display: none; 不顯示於頁面上。
 -  display: grid; 依照比例/百分比/px進行劃分。
 ---------------------------------------------
-元件左右置中：
-- margin-left:auto;  margin-right:auto
----------------------------------------------
-vertical-align：物件水平對齊，建議用*先將所有元素預設為top。
+vertical-align：垂直(上下)對齊方式(僅可套用於表格中) 建議用*先將所有元素預設為top。
 -  vertical-align: top; 置上對齊。
 -  vertical-align :middle; 水平置中對齊。
--  vertical-align: bottom; 為置底對齊。
+-  vertical-align: bottom; 置底對齊。
+---------------------------------------------
+元件水平置中方式(左右)：
+- margin-left:auto;  margin-right:auto
+---------------------------------------------
+元件垂直置中方式(上下)：
+1. 行高(line-height)：單行文字適用，不適合多行文字。
+2. 表格：多行文字適用。先將區塊設定為表格(display:table;)，再加上"vertical-align:middle;"
+3. 虛擬元素：先將區塊設定為inline-block(display:inline-block;)，再加上"vertical-align:middle;"
+   但非表格的vertical-align:middle是用兩個相連區塊互相比對，所以要在父元素加上一個虛擬的物件：
+     .aaa::before{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
 ==========================================*/
-
 
 
 /*==========================================
@@ -85,6 +96,10 @@ padding：內容與框線的間距
 ---------------------------------------------
 margin：框線外部的間距(與其他元件的間距)
 - margin: 0px 0px0px 0px; (上右下左）
+---------------------------------------------
+如是針對div設定間距，則margin上下左右都有，
+如是針對行內(span)設定間距，則margin只有左右，上下會被吃掉，可以用display把span改成區塊(block)，就不會有此問題。
+
 ==========================================*/
 
 .inner{
@@ -317,5 +332,33 @@ grid-column, grid-row：上述項目的縮寫，使用斜線 (/) 隔開屬性
 grid-area：上述項目的縮寫，使用斜線 (/) 隔開屬性，
 順序為：row-start/ column-start / row-end/ column-end
  - grid-area: 2 / 2 / 4/ 4;
+
+==========================================*/
+
+
+
+/*==========================================
+float 浮動排版
+---------------------------------------------
+float：排列方式為浮動區塊
+- float: left/ right;  為浮動區塊，並靠左/右對齊排列，有類似文繞圖的效果。
+---------------------------------------------
+clear：清除指定區塊左右兩邊的浮動區塊。
+- clear: left/ right;  清除該區塊左/右的浮動區塊(即左/右邊不要有浮動區塊，自己往下排)
+- clear: both;  清除該區塊左與右邊的浮動區塊(即兩邊都不要有浮動區塊，自己往下排)
+---------------------------------------------
+設定區塊為float後，該區塊會浮起來：
+1. 當子元素都是浮動，則父元素的高度會消失。
+2. 緊接在浮動區塊的其他元素會跑位。
+>>解決方式
+1. 高度
+2. overflow：父元素加上「overflow:auto;」，超出範圍時自動補滿長寬。
+3. clearfix：最常使用。父元素加上一個class「clearfix」，填入CSS「clear:both;」，如下：
+  clearfix::after｛
+    content: "";
+    display: blok;
+    clear: both;
+  ｝
+  (clear:both;，表示清除float-left與float-right屬性的影響。)
 
 ==========================================*/

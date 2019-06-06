@@ -1,19 +1,42 @@
+*{
+  font-size: 14px;
+  font-family: 微軟正黑體,Arial;
+  position: relative;
+}
+
+/* ==========================================
+cursor：設定滑鼠樣式。
+-  cursor: pointer; 滑鼠移置區塊上時，滑鼠樣式為「手指」。
+==========================================*/
+
+
+
 /* ==========================================
 :hover：滑鼠移至區塊時的顯示。class名稱後方加上「:hover」
   下面範例
   1. 當滑鼠移到aaa區塊時，aaa區塊顏色改為紅色
   2. 當滑鼠移到aaa區塊時，bbb區塊顏色改為綠色
-  (注意階層)
+
+  ------------------------------------------
+  注意階層：如aaa與bbb同階層，須於hover後方加上+，如下：
+
+  .aaa:hover .bbb{
+  background-color: green;
+  }
+  -----表示bbb在aaa區塊中
+
+  .aaa:hover+ .bbb{
+  background-color: green;
+  }
+  ----表示aaa與bbb同一階層，但不能是爸爸 或是 爸爸的親戚的小孩
 ==========================================*/
 .aaa, .bbb{
   position: relative;
   display: inline-block;
-  width: 100px;
-  height: 50px;
-  border: solid 1px #000000;
   padding: 20px;
   margin-left: 10px;
   background-color: #cccccc;
+  cursor: pointer;
 }
 
 .aaa:hover{
@@ -29,5 +52,74 @@
   下面範例，當滑鼠點選 aaa區塊時，aaa區塊顏色改為藍色
 ==========================================*/
 .aaa:active{
-    background-color: blue;
+  background-color: blue;
   }
+
+/*==========================================
+transform：物件位移、旋轉、放大縮小、傾斜
+- transform: translateX(-50%);  物件往右偏移本身寬度的50%
+- transform: translateY(30%);  物件往下偏移本身高度的30%
+- transform: rotate(45deg);  旋轉45度
+- transform: scaleX(1.2);  X寬度放大1.2倍
+- transform: skew(45deg); 物件扭曲傾斜45度
+- transform-origen: 50% 100%; 物件的座標原點往右移本身寬度的50%、往下移本身高度的100%
+                     center buttom; 表示由中下方作為原點進行動作。
+==========================================*/
+
+.transform{
+  float: left;
+  margin: 10px;
+  width: 200px;
+  height: 150px;
+  background-color: #efefef;
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+.transform-item{
+  position: absolute;
+  top: 70px;
+  left: 75px;
+  width: 50px;
+  height: 50px;
+  background-color: darkcyan;
+  border: solid 1px darkslategrey;
+}
+
+.bg{
+  position: absolute;
+  top: 70px;
+  left: 75px;
+  width: 50px;
+  height: 50px;
+  border: dashed 1px orange;
+}
+
+
+
+.ccc{
+  transform: translateX(-50%);
+}
+
+.ddd{
+  transform: translateY(30%);
+}
+
+.eee{
+  transform: rotate(45deg);
+}
+
+.fff{
+  transform: scaleX(1.2);
+}
+
+.ggg{
+  transform: skew(45deg);
+}
+
+.hhh{
+  transform-origen: 50% 100%;
+}
+
+
