@@ -14,9 +14,84 @@
 2. 優先權：style > id > class
 3. 同一個網站，id必須只能有一個，不可重複使用
 ====================================================-->
+
+<!--====================================================
+:hover、:active說明
+====================================================-->
+  <h1>:hover 滑鼠移至、:active 滑鼠點擊效果</h1>
   <div class="ab">
-    <div class="aaa">AAA</div>
-    <div class="bbb">BBB</div>
+    <div class="aaa">A按鈕</div>
+    <div class="bbb">B按鈕</div>
+  </div>
+  <hr>
+<!--====================================================
+transform說明
+====================================================-->
+  <h1>transform：物件位移、旋轉、放大縮小、傾斜</h1>
+  <div class="section">
+    <div class="transform">
+      <p>原始狀態<br>(座標原點為中心點)</p>
+      <div class="transform-item"></div>
+      <div class="bg"></div>
+    </div>
+
+    <div class="transform">
+      <p>物件往右偏移本身寬度的50%<br>
+        translateX(-50%)</p>
+      <div class="transform-item ccc"></div>
+      <div class="bg"></div>
+    </div>
+
+    <div class="transform">
+      <p>物件往下偏移本身高度的30%<br>
+      translateY(30%)</p>
+      <div class="transform-item ddd"></div>
+      <div class="bg"></div>
+    </div>
+    <div class="transform">
+      <p>旋轉45度<br>
+        rotate(45deg)</p>
+      <div class="transform-item eee"></div>
+      <div class="bg"></div>
+    </div>
+    <div class="transform">
+      <p>X寬度放大1.2倍<br>
+        scaleX(1.2)</p>
+      <div class="transform-item fff"></div>
+      <div class="bg"></div>
+    </div>
+    <div class="transform">
+      <p>物件扭曲傾斜45度<br>
+        skew(45deg)</p>
+      <div class="transform-item ggg"></div>
+      <div class="bg"></div>
+    </div>
+    <div class="transform">
+      <p>座標原點右移50%下移100%<br>
+        transform-origen: 50% 100%;</p>
+      <div class="transform-item hhh"></div>
+      <div class="bg"></div>
+    </div>
+  </div>
+  <hr>
+<!--====================================================
+滑鼠操作動畫說明
+====================================================-->
+  <h1>滑鼠操作動畫</h1>
+  <div class="btn1">
+    <div class="line1"></div>
+    <div class="line2"></div>
+  </div>
+  <div class="block">
+    <div class="pre">點我示範</div>
+    <div class="name">關於滑鼠操作動畫</div>
+    <div class="about">transition-duration：動作持續時間，指區塊內的動畫於指定秒數內漸變完成。<br>
+      - transition-duration: 1s; 如有hover或active等動作，會延展到1秒內慢慢漸變完成顯示<br>
+      例：hover時寬度由5px瞬間變為10px，加上後會慢慢在一秒內從5px延展為10px。<br>
+      ------------------------------------------<br>
+      transition-deley：動作延遲時間，指區塊內的動畫會延遲指定秒數後才開始播放。<br>
+      - transition-deley: 1s; 如有hover或active等動作，會延遲1秒後才執行。<br>
+      例：hover時寬度由5px瞬間變為10px，加上後會在一秒後才從5px變為10px。</div>
   </div>
 
 </body>
