@@ -40,6 +40,7 @@ cursor：設定滑鼠樣式。
   display: inline-block;
   padding: 20px;
   margin-left: 10px;
+  margin-bottom: 20px;
   background-color: #efefef;
   cursor: pointer;
 }
