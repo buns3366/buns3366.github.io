@@ -91,6 +91,11 @@ transform：物件位移、旋轉、放大縮小、傾斜
   text-align: center;
 }
 
+.transform p{
+  background-color: transparent;
+}
+
+
 .transform-item{
   position: absolute;
   z-index:1;
@@ -154,7 +159,7 @@ transition-deley：動作延遲時間，指區塊內的動畫會延遲指定秒�
   width: 150px;
   height: 150px;
   border: solid 1px #FFF;
-  margin-bottom: 30px;
+  margin:0px 10px 0px 10px;
   background-color: #46CAB3;
   transition-duration: 0.35s;
   cursor: pointer;
@@ -192,8 +197,7 @@ transition-deley：動作延遲時間，指區塊內的動畫會延遲指定秒�
   width: 600px;
   height: auto;
   padding: 30px;
-  margin-left: 30px;
-  margin-bottom: 20px;
+  margin: 0px 10px 30px 10px;
   border: solid 2px #FFF;
 }
 .block .pre {
