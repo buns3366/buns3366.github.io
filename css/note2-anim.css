@@ -1,11 +1,11 @@
 *{
-  font-size: 14px;
   font-family: 微軟正黑體,Arial;
   position: relative;
 }
 
 body{
-  background: #666;
+  background: #444444;
+  font-size: 14px;
 }
 
 
@@ -39,12 +39,15 @@ cursor：設定滑鼠樣式。
   }
   ----表示aaa與bbb同一階層，但不能是爸爸 或是 爸爸的親戚的小孩
 ==========================================*/
+.section1{
+  margin-bottom: 20px;
+}
+
 .aaa, .bbb{
   position: relative;
   display: inline-block;
   padding: 20px;
   margin-left: 10px;
-  margin-bottom: 20px;
   background-color: #efefef;
   cursor: pointer;
 }
@@ -75,11 +78,11 @@ transform：物件位移、旋轉、放大縮小、傾斜
 - transform-origen: 50% 100%; 物件的座標原點往右移本身寬度的50%、往下移本身高度的100%
                      center buttom; 表示由中下方作為原點進行動作。
 ==========================================*/
-.section{
+.section2{
   margin-bottom: 20px;
 }
 
-.section::after{
+.clearfix::after{
   content: "";
   display: block;
   clear: both;
@@ -90,9 +93,13 @@ transform：物件位移、旋轉、放大縮小、傾斜
   margin: 10px;
   width: 200px;
   height: 150px;
-  background-color: #efefef;
+  background-color: rgba(256,256,256,0.2);
   border-radius: 10px;
   text-align: center;
+}
+.transform p{
+  font-size: 13px;
+  color: #FFFFFF;
 }
 
 .transform-item{
@@ -103,7 +110,7 @@ transform：物件位移、旋轉、放大縮小、傾斜
   width: 50px;
   height: 50px;
   background-color: darkcyan;
-  border: solid 1px darkslategrey;
+  border: solid 1px #FFFFFF;
 }
 
 .bg{
@@ -114,7 +121,7 @@ transform：物件位移、旋轉、放大縮小、傾斜
   width: 50px;
   height: 50px;
   background-color: rgba(0,0,0,0);
-  border: dashed 1px orange;
+  border: dashed 1.5px orange;
 }
 
 .ccc{
@@ -153,6 +160,10 @@ transition-deley：動作延遲時間，指區塊內的動畫會延遲指定秒�
   例：hover時寬度由5px瞬間變為10px，加上後會在一秒後才從5px變為10px。
 ==========================================*/
 
+.section3{
+  margin-bottom: 20px;
+}
+
 .btn1 {
   float: left;
   width: 150px;
@@ -171,7 +182,6 @@ transition-deley：動作延遲時間，指區塊內的動畫會延遲指定秒�
   height: 6px;
   border: solid 1px #FFF;
   background-color: #FFF;
-
   transform: translateX(-50%) translateY(-50%);
   transition-duration: 0.3s;
 }
@@ -196,7 +206,7 @@ transition-deley：動作延遲時間，指區塊內的動畫會延遲指定秒�
   width: 600px;
   height: auto;
   padding: 30px;
-  margin: 0px 10px 30px 10px;
+  margin: 0px 10px 0px 10px;
   border: solid 2px #FFF;
 }
 .block .pre {
@@ -258,4 +268,162 @@ animation-timimg-function：動畫速度曲線
    --可參考不同動畫取線網站： https://easings.net/
    --可自行設定動畫速度的貝茲取線(自行研究)。
 ==========================================*/
+.section4{
+  width: 600px;
+  height: 200px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px #FFFFFF;
+}
 
+.animbox {
+  position: absolute;
+  bottom: 0px;
+  width: 50px;
+  height: 50px;
+  border: solid 1px #FFFFFF;
+}
+
+.a1 {
+  left: 50px;
+  background-color: orange;
+  border-radius: 100%;
+  animation: a1 2s infinite;
+}
+
+.a2 {
+  left: 150px;
+  animation: a2 2s infinite;
+}
+
+.a3 {
+  left: 250px;
+  background-color: #46CAB3;
+  animation: a3 3s infinite;
+}
+
+.a4 {
+  left: 350px;
+  background-color: deepskyblue;
+  animation: a4 2s infinite;
+}
+
+.a5 {
+  left: 450px;
+  animation: a5 3s infinite;
+}
+
+@keyframes a1 {
+  0% {
+    bottom: 100px;
+  }
+  50% {
+    bottom: 0px;
+    background-color: red;
+  }
+  100% {
+    bottom: 100px;
+  }
+}
+@keyframes a2 {
+  0% {
+    bottom: 100px;
+  }
+  30% {
+    bottom: 0px;
+    transform: rotate(0deg);
+  }
+  50% {
+    bottom: 0px;
+    transform: rotate(180deg);
+    background-color: yellow;
+  }
+  70% {
+    bottom: 0px;
+    transform: rotate(0deg);
+  }
+  100% {
+    bottom: 100px;
+  }
+}
+
+@keyframes a3 {
+  0% {
+    height: 50px;
+    background-color: #209797;
+  }
+  10%{
+    height: 10px;
+  }
+  50% {
+    height: 150px;
+    background-color: mediumseagreen;
+  }
+  90%{
+    height: 30px;
+  }
+  100% {
+    height: 50px;
+  }
+}
+
+@keyframes a4 {
+  0% {
+    bottom: 0px;
+  }
+  30% {
+    bottom: 100px;
+    transform: scale(1,1);
+  }
+  45% {
+    bottom: 100px;
+    transform: scale(1.3,1.3);
+  }
+  60% {
+    bottom: 100px;
+    transform: scale(0.8,0.8);
+  }
+  70% {
+    bottom: 100px;
+    transform: scale(1,1);
+  }
+  100%{
+    bottom: 0px;
+  }
+}
+
+@keyframes a5 {
+  0% {
+    transform: translateY(0%);
+  }
+
+  16% {
+    background-color: mediumpurple;
+    transform: translateY(-132.27%);
+  }
+
+  28% {
+    transform: translateY(-86.88%);
+  }
+
+  44% {
+    transform: translateY(-104.63%);
+  }
+
+  59% {
+    transform: translateY(-98.36%);
+  }
+
+  73% {
+    transform: translateY(-100.58%);
+  }
+
+  88% {
+    transform: translateY(-99.8%);
+  }
+
+  100% {
+    background-color: mediumpurple;
+    transform: translateY(-100%);
+  }
+
+}
