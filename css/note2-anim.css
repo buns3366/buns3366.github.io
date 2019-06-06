@@ -78,6 +78,7 @@ transform：物件位移、旋轉、放大縮小、傾斜
 
 .transform-item{
   position: absolute;
+  z-index:1;
   top: 70px;
   left: 75px;
   width: 50px;
