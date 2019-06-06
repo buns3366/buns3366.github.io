@@ -2,8 +2,12 @@
   font-size: 14px;
   font-family: 微軟正黑體,Arial;
   position: relative;
+}
+
+body{
   background: #666;
 }
+
 
 h1{
   font-size: 16px;
@@ -90,11 +94,6 @@ transform：物件位移、旋轉、放大縮小、傾斜
   border-radius: 10px;
   text-align: center;
 }
-
-.transform p{
-  background-color: transparent;
-}
-
 
 .transform-item{
   position: absolute;
@@ -253,8 +252,8 @@ animation-delay：延遲播放動畫
 ------------------------------------------
 animation-timimg-function：動畫速度曲線
   - animation-timimg-function: linear; 0~100%都是相同速度。
-  - animation-timimg-function: easse-in; 預設，開頭慢。
-  - animation-timimg-function:   easse-out; 結尾慢。
+  - animation-timimg-function: ease-in; 預設，開頭慢。
+  - animation-timimg-function: ease-out; 結尾慢。
   - animation-timimg-function: steps(5); 表示0~100%，切分成5個畫面定格顯示，而非平滑漸變顯示。
    --可參考不同動畫取線網站： https://easings.net/
    --可自行設定動畫速度的貝茲取線(自行研究)。
