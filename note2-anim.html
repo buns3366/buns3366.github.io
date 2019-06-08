@@ -218,8 +218,8 @@ SVG 向量圖動畫
   F. repeatCount：播放次數，或輸入 "indefinite"表示無限循環。
     - svg(viewbox="0 0 200 200")
                rect(x1=0 y1=0 width=20 height=20)
-                    animateTransform(type="rotate" dur="2s" values="0;360" repeatCount="indefinite")
-                   針對物件進行旋轉，每回合執行2秒，旋轉角度分別為0,360，無限循環針對變形/位移做動畫：animateTransForm
+                    animateTransform(type="rotate" dur="2s" values="0,150,50;360,150,50" repeatCount="indefinite")
+                   針對物件進行旋轉，每回合執行2秒，旋轉角度分別為0+X座標+Y座標,360+X座標+Y座標，無限循環針對變形/位移做動畫：animateTransForm
 ====================================================-->
 
 <h1>SVG向量圖動畫</h1>
@@ -234,23 +234,14 @@ SVG 向量圖動畫
       <animate attributeName="fill" begin="-0.2s" Dur="5s" values="#46CAB3;darkcyan;yellow;red;green;#46CAB3" repeatCount="indefinite"></animate>
     </circle>
   </svg>
-  <svg class="svgview" width="800px" height="300px" viewBox="-400 -150 800 300">
-    <text class="svgtext-title" x="-130" y="70">針對變形/位移做動畫：animateTransForm</text>
-    <text class="svgtext" x="-250" y="100">animateTransform attributeName="transform" type="rotate" begin="-0.2s" </text>
-    <text class="svgtext" x="-180" y="120">dur="2s" values="0;360" repeatCount="indefinite"</text>
-    <text class="svgtext" x="-220" y="140">旋轉，頁面載入-0.2秒開始執行，每回合執行2秒，數值分別為0,360，無限循環</text>
-    <rect x="-25" y="-25" width="50px" height="50px" stroke="#FFFFFF" fill="#46CAB3">
-      <animateTransform attributeName="transform" type="rotate" begin="-0.2s" dur="2s" values="0;360" repeatCount="indefinite"></animateTransform>
-    </rect>
-  </svg>
   </svg>
   <svg class="svgview" width="800px" height="300px" viewBox="0 0 800 300">
-    <text class="svgtext-title" x="-130" y="70">針對變形/位移做動畫：animateTransForm</text>
-    <text class="svgtext" x="-250" y="100">animateTransform attributeName="transform" type="rotate" begin="-0.2s" </text>
-    <text class="svgtext" x="-180" y="120">dur="2s" values="0;360" repeatCount="indefinite"</text>
-    <text class="svgtext" x="-220" y="140">旋轉，頁面載入-0.2秒開始執行，每回合執行2秒，數值分別為0,360，無限循環</text>
-    <rect x="375" y="125" width="50px" height="50px" stroke="#FFFFFF" fill="#46CAB3">
-      <animateTransform attributeName="transform" type="rotate" begin="-0.2s" dur="2s" values="0,400,150;360,400,150" repeatCount="indefinite"></animateTransform>
+    <text class="svgtext-title" x="230" y="210">針對變形/位移做動畫：animateTransForm</text>
+    <text class="svgtext" x="160" y="240">animateTransform attributeName="transform" type="rotate" begin="-0.2s"</text>
+    <text class="svgtext" x="180" y="260">dur="2s" values="0,400,125;360,400,125" repeatCount="indefinite"</text>
+    <text class="svgtext" x="160" y="280">旋轉，頁面載入-0.2秒開始執行，每回合執行2秒，數值分別為0,360，無限循環</text>
+    <rect x="375" y="100" width="50px" height="50px" stroke="#FFFFFF" fill="#46CAB3">
+      <animateTransform attributeName="transform" type="rotate" begin="-0.2s" dur="2s" values="0,400,125;360,400,125" repeatCount="indefinite"></animateTransform>
     </rect>
   </svg>
 </div>
