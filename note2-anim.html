@@ -8,13 +8,6 @@
 </head>
 
 <body>
-
-<!--====================================================
-1. class可套用2個以上，用空格區分，後面的優先權較高
-2. 優先權：style > id > class
-3. 同一個網站，id必須只能有一個，不可重複使用
-====================================================-->
-
 <!--====================================================
 :hover、:active說明
 ====================================================-->
@@ -107,6 +100,150 @@ transform說明
     <div class="animbox a4"></div>
     <div class="animbox a5"></div>
   </div>
+
+<!--====================================================
+SVG 向量圖繪製
+------------------------------------------
+物件語法寫在HTML中由上至下，圖層由底往上疊，可於CSS中調整樣式
+------------------------------------------
+SVG
+可視範圍分為相框(vierport)與觀景窗(viewbox)
+成像(vierport)：SVG整體圖片的大小，中心點為座標(0,0)，所有SVG的座標以此為基準。
+觀景窗(viewbox)：視同"相片"，SVG可視範圍的大小，會被成像影響，原點為左上角。
+  -  <svg class="svgview" width="500px" height="500px" viewBox="-250 -250 300px 300px">
+      成像寬為500*500px，觀景窗中心點座標於(-250, -250)，觀景窗長寬為300*300px
+      ※viewbox如果比viewport小，則viewbox會自動放大填滿整個區域；所以上述範例的觀景窗300*300會自動放大為500*500。
+        viewbox如果比viewport大，則viewbox會自動縮小填滿整個區域；
+
+ 可參考：https://www.sarasoueidan.com/demos/interactive-svg-coordinate-system/index.html
+------------------------------------------
+SVG圖形繪製
+  1. SVG 圓形：circle(cx=0 cy=0 r=20)，x座標、y座標、r半徑
+    - svg(width="300" height="100" viewbox="-50 -50 100 100")
+            circle(cx=0 cy=0 r=20)
+             表示圓形的中心座標為(0,0)，半徑為20px。(觀景窗需移動才看到到整個圓)
+  2. SVG 直線：line(x1=0 y1=0 x2=20 y2=20)， A點x座標、 A點 y座標、B點x座標、 B點y座標
+  3. SVG 方框：rect(x=0 y=0 width=20 height=20)， 左上點x座標、 左上點 y座標、寬度、 高度
+  4. SVG 折線：polyline(points="0,0 1,1 2,2 3,3 4,4") ，0,0為第一個點的座標，1,1為第二個點的座標
+  5. SVG 橢圓：ellipse(cx=0 cy=0 rx=20 ry=50)， x座標、y座標、寬半徑(x軸)，高半徑(y軸)
+  6. SVG 文字：text(x=20 y=10) 這裡打文字，文字左上角的x座標 、 y座標，空格後打入文字
+  7. stroke：邊線顏色，fill：填色，可寫於HTML或CSS中
+------------------------------------------
+ SVG元件群組：元件放在群組名稱下方+縮排
+    - group
+         A
+         B
+ ====================================================-->
+
+<h1>SVG向量圖繪製</h1>
+<div class="section5 clearfix">
+  <svg class="svgview" width="300px" height="300px" viewBox="-150 -150 300 300">
+    <text class="svgtext" x="-25" y="-20" >原點(0,0)</text>
+    <text class="svgtext-y" x="-140" y="-120">觀景窗(-150,-150)</text>
+    <text class="svgtext" x="-140" y="50">成像大小：300*300px</text>
+    <text class="svgtext" x="-70" y="70">中心為座標(0,0)</text>
+    <text class="svgtext-y" x="-140" y="100">觀景窗大小：300*300px</text>
+    <text class="svgtext-y" x="-60" y="120">座標為(-150,-150)</text>
+    <text class="svgtext-y" x="-60" y="140">(觀景窗左上角為原點)</text>
+    <circle cx="0" cy="0" r="5px" stroke="#FFFFFF" fill="red"></circle>
+    <circle cx="-150" cy="-150" r="5px" stroke="#FFFFFF" fill="yellow"></circle>
+  </svg>
+  <svg class="svgview" width="300px" height="300px" viewBox="-150 -150 300 300">
+    <text class="svgtext-title" x="-15" y="70">圓形</text>
+    <text class="svgtext" x="-100" y="110">中心座標(-30,0)，半徑60px</text>
+    <text class="svgtext" x="-100" y="130">circle cx="0" cy="-30" r="60px"</text>
+    <circle cx="0" cy="-30" r="60px" stroke="#FFFFFF" fill="#46CAB3"></circle>
+  </svg>
+  <svg class="svgview" width="300px" height="300px" viewBox="-150 -150 300 300">
+    <text class="svgtext-title" x="-15" y="70">直線</text>
+    <text class="svgtext" x="-80" y="110">A點x,y座標、B點x,y座標</text>
+    <text class="svgtext" x="-80" y="-75">A</text>
+    <text class="svgtext" x="70" y="40">B</text>
+    <text class="svgtext" x="-130" y="130">line x1="-90" y1="-90" x2="90" y2="40"</text>
+    <line x1="-60" y1="-60" x2="60" y2="30" stroke="#FFFFFF"></line>
+  </svg>
+  <svg class="svgview" width="300px" height="300px" viewBox="-150 -150 300 300">
+    <text class="svgtext-title" x="-15" y="70">方框</text>
+    <text class="svgtext" x="-90" y="100">左上點x,y座標、寬度、高度</text>
+    <text class="svgtext" x="-90" y="117">rect x="-80" y="-70"</text>
+    <text class="svgtext" x="-90" y="135">width="160px" height="80px"</text>
+    <rect x="-80" y="-70" width="160px" height="80px" stroke="#FFFFFF" fill="#46CAB3"></rect>
+  </svg>
+  <svg class="svgview" width="300px" height="300px" viewBox="-150 -150 300 300">
+    <text class="svgtext-title" x="-15" y="70">折線</text>
+    <text class="svgtext" x="-100" y="100">第1個點x,y座標、第2個點x,y座標...</text>
+    <text class="svgtext" x="-100" y="120">polyline points="-90,30 -60,-5..."</text>
+    <polyline points="-90,30 -60,-5 -30,10 0,-100 30,-40 60,-60" stroke="#FFFFFF" fill="none"></polyline>
+  </svg>
+  <svg class="svgview" width="300px" height="300px" viewBox="-150 -150 300 300">
+    <text class="svgtext-title" x="-15" y="70">橢圓</text>
+    <text class="svgtext" x="-120" y="100">x座標、y座標、寬半徑(x軸)，高半徑(y軸)</text>
+    <text class="svgtext" x="-145" y="120">ellipse cx="0" cy="-50" rx="80px" ry="50px"</text>
+    <ellipse cx="0" cy="-50" rx="80px" ry="50px" stroke="#FFFFFF" fill="#46CAB3"></ellipse>
+  </svg>
+  <svg class="svgview" width="300px" height="300px" viewBox="-150 -150 300 300">
+    <text class="svgtext-title" x="-15" y="70">文字</text>
+    <text class="svgtext" x="-135" y="100">文字左上角座標x,y，相對前一個字的位置</text>
+    <text class="svgtext" x="-135" y="120">text x="-120" y="-70" dx="0,30,5,20,1,-5"</text>
+    <text class="svgtext-sample"x="-120" y="-30" dx="0,30,5,20,1,-5">示範文字內容</text>
+  </svg>
+
+</div>
+
+
+<!--====================================================
+SVG 向量圖動畫
+------------------------------------------
+需要在HTML先給每個物件名稱， 如下方 .aaa
+  - svg .aaa(viewbox="-50 -50 100 100")
+          circle(cx=0 cy=0 r=20)
+ ------------------------------------------
+針對屬性值做動畫：animate，需要寫在HTML中要做動態的SVG元件或群組下方。 ＊數值需要加上雙引號
+  A. attributeName：針對哪個的數值做改變，x/ y/ r
+  B. begin：動畫開始時間，例如：0.2s(-0.2秒)，頁面進入後-0.2秒開始動畫(建議數值為負數，進入畫面才不會有跳一下的感覺)
+  C. dur：時間長度，例如：2s (2秒)。
+  D. values：影格的數值，用分號;隔開。
+  E. repeatCount：播放次數，或輸入 "indefinite"表示無限循環。
+    - svg(viewbox="-50 -50 100 100")
+              circle(cx=0 cy=0 r=20)
+                    animate(AttributeName="r" dur="2s" values="10; 8; 5" repeatCount="indefinite")
+                     針對r的數值改變，每回合執行2秒，數值分別為10,8,5，無限循環
+------------------------------------------
+針對變形/位移做動畫：animateTransForm
+  A. attributeName：transform
+  B. begin：動畫開始時間，例如：0.2s(-0.2秒)，頁面進入後-0.2秒開始動畫(建議數值為負數，進入畫面才不會有跳一下的感覺)
+  C. type：改變的方式，scale放大縮小 / rotate旋轉
+  D. dur：時間長度，例如：2s (2秒)。
+  E. values：影格的type數值，用分號;隔開。
+  F. repeatCount：播放次數，或輸入 "indefinite"表示無限循環。
+    - svg(viewbox="0 0 200 200")
+               rect(x1=0 y1=0 width=20 height=20)
+                    animateTransform(type="rotate" dur="2s" values="0;360" repeatCount="indefinite")
+                   針對物件進行旋轉，每回合執行2秒，旋轉角度分別為0,360，無限循環針對變形/位移做動畫：animateTransForm
+====================================================-->
+
+<h1>SVG向量圖動畫</h1>
+<div class="section6 clearfix">
+  <svg class="svgview" width="800px" height="300px" viewBox="-400 -150 800 300">
+    <text class="svgtext-title" x="-120" y="80">針對屬性值做動畫：animate</text>
+    <text class="svgtext" x="-350" y="110">animate attributeName="r" begin="-0.2s" Dur="2s" values="30px;60px;30px" repeatCount="indefinite"</text>
+    <text class="svgtext" x="-320" y="130">針對r的數值改變，頁面載入-0.2秒開始執行，每回合執行2秒，數值分別為30px,60px,30px，無限循環</text>
+    <circle cx="-280" cy="-30" r="60px" stroke="#FFFFFF" fill="#46CAB3">
+      <animate attributeName="r" begin="-0.2s" Dur="2s" values="30px;60px;10px;45px;30px" repeatCount="indefinite"></animate>
+      <animate attributeName="cx" begin="-0.2s" Dur="10s" values="-280;280;-280" repeatCount="indefinite"></animate>
+      <animate attributeName="fill" begin="-0.2s" Dur="5s" values="#46CAB3;darkcyan;yellow;red;green;#46CAB3" repeatCount="indefinite"></animate>
+    </circle>
+  </svg>
+  <svg class="svgview" width="800px" height="300px" viewBox="-400 -150 800 300">
+    <text class="svgtext-title" x="-130" y="70">針對變形/位移做動畫：animateTransForm</text>
+    <text class="svgtext" x="-250" y="100">animateTransform attributeName="transform" type="rotate" begin="-0.2s" </text>
+    <text class="svgtext" x="-180" y="120">dur="2s" values="0;360" repeatCount="indefinite"</text>
+    <text class="svgtext" x="-220" y="140">旋轉，頁面載入-0.2秒開始執行，每回合執行2秒，數值分別為0,360，無限循環</text>
+    <rect x="-80" y="-70" width="50px" height="50px" stroke="#FFFFFF" fill="#46CAB3">
+      <animateTransform attributeName="transform" type="rotate" begin="-0.2s" dur="2s" values="0;360" repeatCount="indefinite"></animateTransform>
+    </rect>
+  </svg>
+</div>
 </body>
 
 </html>

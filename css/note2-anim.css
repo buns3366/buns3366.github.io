@@ -271,7 +271,7 @@ animation-timimg-function：動畫速度曲線
 .section4{
   width: 600px;
   height: 200px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-bottom: solid 1px #FFFFFF;
 }
 
@@ -426,4 +426,48 @@ animation-timimg-function：動畫速度曲線
     transform: translateY(-100%);
   }
 
+}
+
+/*==========================================
+SVG CSS對照
+  A. 框線顏色：border-color = stroke
+  B. 框線粗細：border-width = stroke-width
+  C. 背景色：background-color = fill，fill: none代表內不部填色。
+  D. 定位：left/ top = x/ y (圓形時用cx/ cy)
+  E. 寬/ 高：width/ height =  width/ heigh
+==========================================*/
+.section5{
+  margin-bottom: 20px;
+}
+
+.svgview{
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: solid 1px #FFFFFF;
+  stroke-width:3px;
+}
+
+
+.svgtext{
+  font-size: 14px;
+  fill: #FFFFFF;
+}
+
+.svgtext-y{
+  font-size: 14px;
+  fill: yellow;
+}
+
+.svgtext-title{
+  font-size: 18px;
+  fill: #FFFFFF;
+}
+.svgtext-sample{
+  font-size: 18px;
+  fill: #46CAB3;
+
+
+.section6{
+  margin-bottom: 20px;
 }
