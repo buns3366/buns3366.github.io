@@ -36,7 +36,7 @@ $(document).ready(function() {
   });
 
   /*
- $(this) 用於同一層function中，如包有其他function，則需用「$(that)」
+ $(this) 用於同一層function中，如包有其他function，則無法通用。
   */
   var sec = 0;
   $(".contact").click(function () {
