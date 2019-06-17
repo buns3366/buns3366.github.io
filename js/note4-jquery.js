@@ -1,10 +1,10 @@
 $(document).ready(function() {
   var n = 10;
 
-  /*
+  /*=================================
   可將function模組化，使用「function aaa(){....}」
   套用時只需要打「aaa()」即可
-   */
+   =================================*/
   function clickbtn(){
     if (n < 10){
       $(".text").text("庫存不足了 T_T");
@@ -35,9 +35,9 @@ $(document).ready(function() {
     clickbtn();
   });
 
-  /*
+  /*=================================
  $(this) 用於同一層function中，如包有其他function，則無法通用。
-  */
+  =================================*/
   var sec = 0;
   $(".contact").click(function () {
     $(".contact").text("撥話中....");
