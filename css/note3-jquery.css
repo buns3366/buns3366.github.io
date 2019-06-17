@@ -9,6 +9,10 @@ body{
   color: #FFFFFF;
 }
 
+p{
+  margin-left: 20px;
+}
+
 .block{
   display: inline-block;
   width: 200px;
@@ -44,6 +48,7 @@ body{
   border: solid 2px white;
   border-radius: 10px;
   background-color: #829db7;
+  transition: 0.2s;
 }
 
 .btn:hover{
@@ -63,7 +68,10 @@ body{
   display: inline-block;
 }
 
+/*按鈕可設定最小寬度*/
 .btn3{
   display: inline-block;
+  min-width: 90px;
+  text-align: center;
 }
 
