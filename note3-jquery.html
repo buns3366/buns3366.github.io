@@ -1,0 +1,52 @@
+
+<html>
+<head>
+  <!--導入線上版本JQuery
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   -->
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/note3.js"></script>
+  <meta charset="utf-8">
+  <title>前端筆記3-JQuery改變CSS與HTML，與滑鼠觸發</title>
+  <link rel="stylesheet" href="css/note3-jquery.css">
+
+</head>
+
+<body>
+<h1>一、JQuery動態改變css外觀與html內容</h1>
+  <h2>1. 更新元素內部html $(選擇條件).html(...)</h2>
+  <div class="block block1">顯示我則表示變更失敗</div>
+<hr>
+  <h2>2. 更新css $(選擇條件).css(...)</h2>
+  <div class="block block2">用JQuery更換背景樣式<br>(藍>橘)</div>
+<hr>
+  <h2>3. 新增/移除css class $(選擇條件).addClass/removeClass(..)</h2>
+  <div class="block block31">增加Class(放大並填色)</div>
+  <div class="block block32 big">移除Class(縮小並除色)</div>
+<hr>
+  <h2>4. 使用html()、prepend()、append()動態新增元素</h2>
+  <div class="block block4"></div>
+<hr>
+  <h2>5. 使用text()顯示純文字</h2>
+  <div class="block block5"></div>
+<hr>
+<h1>二、JQuery 初階滑鼠事件click/hover</h1>
+  <h2>1. 點擊觸發，與紀錄購買狀態 (click)</h2>
+  <div class="btn btn1">點我購買</div>
+<hr>
+  <h2>2. $(this)操作觸發動作的按鍵/ if(true){ run this;}else{ run this;}</h2>
+  <div class="btn btn2" cata="love">西瓜</div>
+  <div class="btn btn2" cata="hate">紅蘿蔔</div>
+  <div class="btn btn2"cata="love">草莓</div>
+  <div class="show">
+    <div class="show_item">選擇商品：尚未選擇</div>
+    <div class="show_cata">| 喜歡嗎?</div>
+  </div>
+<hr>
+<h2>3. 滑鼠的移入移出(mouseenter/mouseleave)</h2>
+<div class="btn btn3">選我選我選我</div>
+<div class="btn btn3">選我選我選我</div>
+<div class="btn btn3">選我選我選我</div>
+<hr>
+</body>
+</html>
