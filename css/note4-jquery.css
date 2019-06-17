@@ -1,0 +1,65 @@
+*{
+  font-family: 微軟正黑體,Arial;
+  position: relative;
+}
+
+body{
+  background-color: #444444;
+  color: #FFFFFF;
+}
+
+.count{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border: solid 1px white;
+  text-align: center;
+}
+
+.plus,.num,.minus{
+  display: inline-block;
+  padding: 20px 10px;
+  font-size: 46px;
+}
+
+.num{
+  min-width: 60px;
+}
+.plus,.minus{
+  user-select: none;
+  width: 40px;
+  transition: 0.3s;
+}
+
+.plus:hover, .minus:hover{
+  background-color: #efefef;
+  color: #444444;
+  cursor: pointer;
+}
+
+.text{
+  padding: 10px;
+  color: #58d894;
+  border-bottom:solid 10px #58d894;
+  transition: 0.3s;
+}
+
+.contact{
+  height: 0px;
+  overflow: hidden;
+  padding: 0px;
+  font-size: 14px;
+  color: #cccccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact_open{
+  height: 30px;
+  padding: 10px;
+  line-height: 30px;
+}
+
+
+
