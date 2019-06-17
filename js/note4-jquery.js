@@ -2,7 +2,12 @@ $(document).ready(function() {
   var n = 10;
 
   /*=================================
-  可將function模組化，使用「function aaa(){....}」
+  1. 注意撰寫格式，有=,>,<都需要用空白隔開
+      --(X) n=n+1
+        (O) n = n +
+      --(X) else if(n<20)
+        (O) else if (n < 20)
+  2. 可將function模組化，使用「function aaa(){....}」
   套用時只需要打「aaa()」即可
    =================================*/
   function clickbtn(){
