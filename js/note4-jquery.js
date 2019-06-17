@@ -40,9 +40,10 @@ $(document).ready(function() {
   */
   var sec = 0;
   $(".contact").click(function () {
+    $(".contact").text("撥話中....");
     setInterval(function () {
       sec = sec + 1;
-      $(that).text("撥話中...."+sec+"秒");
+      $(".contact").text("撥話中...." + sec + "秒");
     },1000);
   });
 
