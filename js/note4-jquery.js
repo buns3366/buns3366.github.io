@@ -1,17 +1,17 @@
 $(document).ready(function() {
-  var n=10;
+  var n = 10;
 
   /*
   可將function模組化，使用「function aaa(){....}」
   套用時只需要打「aaa()」即可
    */
   function clickbtn(){
-    if(n<10){
+    if (n < 10){
       $(".text").text("庫存不足了 T_T");
       $(".text").css("color","#ff5930");
       $(".text").css("border-color","#ff5930");
       $(".contact").addClass("contact_open");
-    }else if(n<20){
+    }else if (n < 20){
       $(".text").text("庫存充足");
       $(".text").css("color","#58d894");
       $(".text").css("border-color","#58d894");
@@ -24,22 +24,25 @@ $(document).ready(function() {
     };
 
   $(".minus").click(function () {
-    n=n-1;
+    n = n - 1;
     $(".num").text(n);
     clickbtn();
     });
 
   $(".plus").click(function () {
-    n=n+1;
+    n = n + 1;
     $(".num").text(n);
     clickbtn();
   });
 
-  var sec=0;
+  /*
+ $(this) 用於同一層function中，如包有其他function，則需用「$(that)」
+  */
+  var sec = 0;
   $(".contact").click(function () {
     setInterval(function () {
-      sec=sec+1;
-      $(this).text("撥話中...."+sec+"秒");
+      sec = sec + 1;
+      $(that).text("撥話中...."+sec+"秒");
     },1000);
   });
 
