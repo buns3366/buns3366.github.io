@@ -88,7 +88,7 @@ vertical-align：垂直(上下)對齊方式(僅可套用於表格中) 建議用*
 4. absolute：設定元件dispaly:absolute，top:50%，left:50%。
 5. flex物件：
    justify-content: center;
-   items-align: center;
+   align-items: center;
 ==========================================*/
 
 

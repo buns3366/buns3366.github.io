@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>標題1</title>
+  <title>Sinyi的前端筆記本</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +12,7 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index1.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -23,13 +23,46 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <p>
-    <a href="./note1-basic.html">note1-basic.html頁面</a><br>
-    <a href="./note2-anim.html">note2-anim.html頁面</a>
-  </p>
+  <div id="intro">
+    <h1>Sinyi的前端練習紀錄</h1>
+    <div class="sec clearfix">
+    <h2>HTML/CSS 基礎練習</h2>
+    <a class="link" href="./note1-basic.html" title="前端筆記1-HTML/CSS/SASS基本練習" target="_blank">
+      <div class="numbg"></div>
+      <div class="num">1</div>
+      <h3>HTML/CSS/SASS基本練習</h3>
+    </a>
+    <a class="link" href="./note2-anim.html" title="前端筆記2-CSS 滑鼠/動畫/SVG向量" target="_blank">
+      <div class="numbg"></div>
+      <div class="num">2</div>
+      <h3>CSS 滑鼠/動畫/SVG向量</h3>
+    </a>
+    </div>
+    <div class="sec clearfix">
+    <h2>JQuery/json 基礎練習</h2>
+    <a class="link" href="./note3-jquery.html" title="前端筆記3-JQuery改外觀與滑鼠觸發" target="_blank">
+      <div class="numbg"></div>
+      <div class="num">3</div>
+      <h3>JQuery改外觀與滑鼠觸發</h3>
+    </a>
+    <a class="link" href="./note4-jquery.html" title="前端筆記4-JQuer變數概念應用" target="_blank">
+      <div class="numbg"></div>
+      <div class="num">4</div>
+      <h3>JQuer變數概念應用</h3>
+    </a>
+    <a class="link" href="./note5-json.html" title="前端筆記5-JS陣列[]跟JSON物件{}" target="_blank">
+      <div class="numbg"></div>
+      <div class="num">5</div>
+      <h3>JS陣列[]跟JSON物件{}</h3>
+    </a>
+    </div>
+
+  </div>
+
+
+  <!--script 預設內容-->
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
@@ -39,6 +72,7 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
 </body>
 
 </html>
