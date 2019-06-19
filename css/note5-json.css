@@ -1,0 +1,66 @@
+*{
+  font-family: 微軟正黑體,Arial;
+  position: relative;
+  /*border: solid 1px white;*/
+}
+
+body{
+  background-color: #444444;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.card{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border: solid 1px #777777;
+  border-radius: 15px;
+  background-color: #555555;
+  /*box-shadow: h-shadow v-shadow blur spread color inset;*/
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+}
+
+
+.card-carrot{
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  width: 260px;
+  height: 260px;
+  background-image: url("../img/carrot.png");
+  opacity: 0.3;
+}
+
+h1{
+  font-size: 26px;
+  margin: 20px 0px;
+}
+
+h2{
+  font-size: 20px;
+  margin: 5px 0px;
+}
+
+ul {
+  padding-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+li{
+  margin: 5px 0px;
+  list-style: none;
+}
+
+.item{
+  margin: 8px 0px;
+  padding: 0px 10px;
+  border-left:solid 3px #42f4cb ;
+  list-style: none;
+}
+
+
