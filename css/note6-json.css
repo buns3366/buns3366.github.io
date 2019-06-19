@@ -1,0 +1,115 @@
+*{
+  font-family: 微軟正黑體,Arial;
+  position: relative;
+  /*border: solid 1px black;*/
+}
+
+body{
+  background-color: darkslategrey;
+  font-size: 14px;
+}
+
+.card{
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+  border: solid 1px #efefef;
+  border-radius: 6px;
+  background-color: #efefef;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+}
+
+.title{
+  text-align: center;
+  padding: 30px;
+  margin: 0px;
+  background-color: #f9f9f9;
+  color: #666666;
+}
+.new{
+  border: #444444;
+  background-color: #cccccc;
+  padding: 10px;
+}
+
+#addmenu,#addprice{
+  padding-left: 3px;
+  margin: 10px 12px 10px 0px;
+}
+
+.addbtn{
+  cursor: pointer;
+  padding: 4px;
+  border: solid 2px #ff6b6b;
+  background-color: #ff6b6b;
+  color: #FFFFFF;
+  transition: 0.2s;
+}
+
+.addbtn:hover{
+  background-color: #ff4949;
+}
+
+ul{
+  padding: 0px 0px;
+}
+
+.item{
+  list-style: none;
+  position: relative;
+  padding: 10px 0px 10px 20px;
+  border-bottom: solid 1px #cccccc;
+}
+
+.item:hover{
+  background-color: #FFFFFF;
+}
+
+.price{
+  position: absolute;
+  display: inline-block;
+  right: 80px;
+  color: #ff4949;
+  font-weight: 900;
+}
+
+.price::before,.price_totle::before{
+  content: "$";
+}
+
+
+.delbtn{
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+  width: 20px;
+  background-color: #cccccc;
+  text-align: center;
+  color: #222222;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delbtn:hover{
+  background-color: #ff6b6b;
+}
+
+.item_totle{
+  margin: 0px 0px -16px 0px;
+  padding: 20px;
+  list-style: none;
+  background-color: #ff6b6b;
+  color: #222222;
+}
+
+.price_totle{
+  position: absolute;
+  display: inline-block;
+  right: 80px;
+  color: #222222;
+  font-weight: 900;
+}
+
+

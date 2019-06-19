@@ -61,7 +61,7 @@ $(document).ready(function() {
   $("#info").append("<li>" + "電話：" + shop2.tel + "</li>");
   $("#info").append("<li>" + "地址：" + shop2.addr + "</li>");
 
-  var shop_html="<ul>";
+  var shop_html = "<ul>";
   for(var i = 0; i < menu2.length; i++){
     shop_html += "<li class='item'>" + [i] + "." + menu2[i] + "</li>";
   };
