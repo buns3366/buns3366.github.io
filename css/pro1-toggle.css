@@ -19,6 +19,11 @@ body{
   text-align: center;
 }
 
+#list_tog{
+  list-style: none;
+  padding: 0px;
+}
+
 .item_tog{
   list-style: none;
   text-align: left;
