@@ -8,7 +8,7 @@ $(document).ready(function() {
   tog.name = "{{清單標題}}";
   tog.time = "2019-6-20";
   tog.list = [
-    {title: "什麼是iCi", content: "Ci是關於美的科學，iCi分析儀...."},
+    {title: "什麼是iCi", content: "iCi是關於美的科學，iCi分析儀...."},
     {title: "什麼是222", content: "222是關於美的科學，iCi分析儀...."},
     {title: "什麼是333", content: "333是關於美的科學，iCi分析儀...."},
   ];
@@ -49,7 +49,10 @@ $(document).ready(function() {
 
     };
 
-  show();
+  // show();
+
+  show(tog);
+  show('#list_tog',tog);
 
 
 });
