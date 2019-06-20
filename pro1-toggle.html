@@ -1,0 +1,56 @@
+<html>
+<head lang="zh-TW">
+  <meta charset=UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{網頁標題}}</title>
+  <meta name="description" content="{{網站描述}}">
+  <meta name="keywords" content="{{網站關鍵字}}">
+
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <!--導入線上版本JQuery
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/pro1-toggle.js"></script>
+  <link rel="stylesheet" href="css/pro1-toggle.css">
+</head>
+
+<body>
+<div id="container">
+  <h1>{{網頁標題}}</h1>
+  <div id="list_tog">
+    <li id="item_tog_1" class="item_tog">
+      <div id="title_tog_1" class="title_tog">什麼是iCi?
+        <div id="btn_tog_1" class="btn_tog_open"></div>
+      </div>
+      <div id="contact_tog_1" class="contact_tog open">
+        iCi是關於美的科學，iCi分析儀...
+      </div>
+    </li>
+    <li id="{{item_tog_ids}}" class="item_tog">
+      <div id="{{title_tog_ids}}" class="title_tog">
+        {{title}}
+        <div id="{{btn_tog_ids}}" class="btn_tog_open"></div>
+      </div>
+      <div id="{{content_tog_ids}}" class="ontact_tog">
+        {{content}}
+      </div>
+    </li>
+
+  </div>
+</div>
+
+<!--script 預設內容-->
+
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+</body>
+</html>
