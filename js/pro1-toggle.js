@@ -40,6 +40,9 @@ $(document).ready(function() {
       //點選title_tog(各列標題區塊)，新增CSS展開，移除CSS收合
       $("#title_tog_" + i).click(function () {
         //show();
+        $(".content_tog").removeClass("open");
+        $(".btn_tog") .removeClass("up");
+
         var current_id = $(this).attr("data-id");
         $("#content_tog_"+current_id).toggleClass("open");
         $("#btn_tog_"+current_id).toggleClass("up");
