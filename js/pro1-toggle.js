@@ -39,7 +39,8 @@ $(document).ready(function() {
 
       //點選title_tog(各列標題區塊)，新增CSS展開，移除CSS收合
       $("#title_tog_" + i).click(function () {
-        //show();
+
+        //點選後先收合所有內容，再展開點擊項目
         $(".content_tog").removeClass("open");
         $(".btn_tog") .removeClass("up");
 
