@@ -32,7 +32,8 @@ body{
 }
 
 .title_tog{
-  padding: 10px 16px;
+  padding: 10px 0px 10px 16px;
+  margin-right: 52px;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -62,8 +63,8 @@ body{
 
 .btn_tog{
   position: absolute;
-  right: 8px;
-  bottom: 0px;
+  right: -44px;
+  top: 0px;
   max-width: 100%;
   width: 44px;
   height: 44px;
