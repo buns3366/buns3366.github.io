@@ -1,0 +1,39 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>前端筆記8-ajax載入購物車清單</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="css/note8-ajax.css">
+
+</head>
+<div class="card">
+  <h1 class="title">胖嘟嘟水果店菜單</h1>
+  <div class="new">
+    <label>品名：</label>
+    <input id="addmenu" placeholder="請輸入品名...">
+    <label>價格：</label>
+    <input id="addprice" placeholder="請輸入金額...">
+    <button class="addbtn">新增</button>
+  </div>
+  <ul id="menulist">
+    <li id='{{id}}' class='item'>{{num}}.{{name}}<div class='price'>{{price}}</div><div id='{{del_id}}' class='delbtn'>X</div></li>
+    <li id="totle_price" class="item_totle">總計<div class="price_totle">{{總價}}</div></li>
+  </ul>
+</div>
+
+<!--scrippt start-->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/note8-ajax.js"></script>
+<!--scrippt end-->
+
+<body>
+
+</div>
+
+</body>
+</html>
