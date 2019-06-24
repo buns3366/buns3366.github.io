@@ -1,0 +1,64 @@
+*{
+  font-family: 微軟正黑體,Arial;
+  position: relative;
+  /*border: solid 1px black;*/
+}
+
+body{
+  background-color: darkslategrey;
+  font-size: 14px;
+}
+
+.card{
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+  border: solid 1px #efefef;
+  border-radius: 6px;
+  background-color: #efefef;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+}
+
+.title{
+  text-align: center;
+  padding: 30px;
+  margin: 0px;
+  background-color: #f9f9f9;
+  color: #666666;
+}
+
+h2{
+  padding: 5px 10px;
+}
+
+ul{
+  padding: 0px 0px;
+}
+
+.item{
+  list-style: none;
+  position: relative;
+  padding: 10px 0px 10px 20px;
+}
+
+.done::before{
+  content: " ✓ ";
+  color: #ff4949;
+
+}
+
+.item:hover{
+  background-color: #FFFFFF;
+}
+
+.date{
+  position: absolute;
+  display: inline-block;
+  right: 10px;
+  color: #46CAB3;
+  font-weight: 900;
+}
+
+
