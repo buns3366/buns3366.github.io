@@ -1,0 +1,80 @@
+*{
+  font-family: 微軟正黑體,Arial;
+  position: relative;
+  /*border: solid 1px black;*/
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+html,body{
+  margin: 0px;
+}
+body{
+  background-color: #efefef;
+  /*預設div之間有一個空白字元，故如要刪掉div之間的間隔，需要將font-size設為0。*/
+  font-size: 0px;
+
+}
+
+.container{
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+}
+
+.block{
+  display: inline-block;
+  height: 200px;
+  padding: 10px;
+  border: solid 2px #cccccc;
+  text-align: center;
+  font-size: 14px;
+}
+
+.title{
+  display: block;
+  height: initial;
+}
+
+.logo{
+  width: 20%;
+  min-width: 100px;
+  border-radius: 100%;
+}
+
+.a,.c,.d{
+  width: 30%;
+}
+
+.b{
+  width: 70%;
+}
+
+.e{
+  width: 40%;
+}
+
+.f{
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .a{
+    width: 100%;
+  }
+
+  .b,.c,.d,.e{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .a,.b,.c,.d,.e{
+    width: 100%;
+  }
+  .logo{
+    min-width: 150px;
+  }
+
+}
