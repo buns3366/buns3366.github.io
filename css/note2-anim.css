@@ -317,6 +317,8 @@ animation-timimg-function：動畫速度曲線
   0% {
     bottom: 100px;
   }
+
+
   50% {
     bottom: 0px;
     background-color: red;

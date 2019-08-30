@@ -7,7 +7,7 @@
    - 0.8 >>用 .8 表示
 ==========================================*/
 .t1{
-  font-size: 54px;
+  font-size: 12px;
   color: red;
 }
 
@@ -49,7 +49,7 @@ html,body{
 
 
 /*==========================================
-1-1 位置屬性(position, top, right, z-index, display, float等)
+1-1 位置屬性(position, display, z-index, float等)
 
 position：控制元件在網頁中的位置。
 - position: static;  自動排列下來且不可移動。(預設)
@@ -85,7 +85,7 @@ vertical-align：垂直(上下)對齊方式(僅可套用於表格中) 建議用*
         height: 100%;
         vertical-align: middle;
       }
-4. absolute：設定元件dispaly:absolute，top:50%，left:50%。
+4. absolute：設定元件display:absolute，top:50%，left:50%。
 5. flex物件：
    justify-content: center;
    align-items: center;
