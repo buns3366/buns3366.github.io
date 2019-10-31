@@ -1,0 +1,47 @@
+meta(charset='UTF-8')
+title Piano (Vue+ajax)
+link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css')
+link(rel='stylesheet', href='assets/css/note10-vue-piano.css')
+//  partial:index.partial.html
+
+#app
+  .audioplayer( v-for = 's in sounddata')
+    //- label {{s.number}}
+    audio(v-bind:data-num = "s.number")
+      source(v-bind:src = "s.url")
+  .centerbox
+    h2 Piano
+    .keyboard
+      .pianokey(v-for = 'p in display_keys')
+        .white(v-if='p.type==\"white\"'
+               v-on:click='addnote(p.num)'
+               v-bind:class="get_current_highlight(p.num,p.key)?\"playing\":\"\"")
+          .label {{String.fromCharCode(p.key)}}
+        .black(v-if='p.type==\"black\"'
+               v-on:click='addnote(p.num)'
+               v-bind:class="get_current_highlight(p.num,p.key)?\"playing\":\"\"")
+          .label {{String.fromCharCode(p.key)}}
+    .controls
+      ul(v-if = "notes.length > 0")
+        li(v-for = '(n,id) in notes'
+           v-bind:class = "now_note_id-1 == id?\"playing\":\"\"")
+          .num {{n.num}}
+          .time {{n.time}}
+      button(v-on:click="load_sample") Dodoro
+      button(v-on:click="playnext(1)") Play next    
+      button(v-if="playing_time<=1" v-on:click="startplay()") Start play
+        i.fa.fa-play
+      button(v-if="playing_time>1" v-on:click="stopplay()") Stop play
+        i.fa.fa-pause
+      button(v-if="record_time<=1" v-on:click="startrecord()") Record
+        i.fa.fa-circle
+      button(v-if="record_time>1" v-on:click="stoprecord()") Stop record
+        i.fa.fa-stop
+      button(v-on:click="notes=[]") Clear
+      br
+      h4 {{record_time+playing_time}}
+
+//  partial
+script(src='assets/js/module/jquery-3.4.1.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js')
+script(src='assets/js/note10-vue-piano.js')

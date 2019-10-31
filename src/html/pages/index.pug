@@ -1,0 +1,57 @@
+extends ../layout/app
+
+block vars
+
+block pages-css
+  link(rel='stylesheet', href='assets/css/index.css')
+
+
+block content
+  main
+    h1 Sinyi-Creative Develop
+
+    // == MAIN =====
+    article#main
+      section
+        .bg-circles
+        .circle-block
+          .bg-lines
+          .fluid
+          img.circle-logo(src='assets/img/logo-siniy.png')
+        .explore
+          img.arrow-down(src='assets/img/arrow-down.svg')
+          p EXPLORE
+
+    // == ABOUT =====
+    article#about.main-wrap
+      section
+        .bg-cat
+        .intro
+          h2 Hello,I am Sinyi
+          p I was a Product and Project manager in online website, EC, O2O service,mobile App, RTLS solution.
+          p Now, I am a
+            span.highlight Front-end Developer
+            | .
+
+    // == SKILLS =====
+    article#skills.main-wrap
+      section
+        h3 Skills
+        ul
+          li.skill-content
+            img(src='assets/img/icon-html.svg')
+            .des
+              h4 HTML
+              p Pug/ Semantic Elements
+          li.skill-content
+          li.skill-content
+          li.skill-content
+          li.skill-content
+          li.skill-content
+
+    // == WORKS =====
+    article#works.main-wrap
+      section
+
+block pages-js
+  //script(src='assets/js/portfolio.js')

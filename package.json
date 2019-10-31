@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "sinyi portfolio",
   "main": "index.js",
+
   "directories": {
     "doc": "doc"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pug-watch": "pug -P -w src/html/pages -o dist"
   },
   "repository": {
     "type": "git",
@@ -16,10 +18,17 @@
   "keywords": [
     "work"
   ],
-  "author": "Sinyi Lin",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/buns3366/buns3366.github.io/issues"
   },
-  "homepage": "https://github.com/buns3366/buns3366.github.io#readme"
+  "homepage": "https://github.com/buns3366/buns3366.github.io#readme",
+  "dependencies": {
+    "html-loader": "^0.5.5",
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "pug-html-loader": "^1.1.5",
+    "pug-loader": "^2.4.0"
+  }
 }

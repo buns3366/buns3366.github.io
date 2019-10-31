@@ -1,0 +1,239 @@
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +common
+ *    +header
+ *		=
+ *    +main
+ *		=
+ *    +footer
+ *		=
+ *-----------------------------------------------------------------------------
+
+@import variable
+@import mixin
+
+/* +common
+ **----------------------------------------------------------------------------
+
+/**
+ **
+ ** =Typography
+ **
+ **
+
+h1, .h1
+  display: none
+
+//h2, .h2
+//  font-size: 1.25rem
+//  line-height: 1.5rem
+//  font-weight: 400
+//  color: #FFF
+//  text-align: center
+//  @include breakpoint($md-up)
+//    font-size: 1.5rem
+//    line-height: 1.75rem
+//
+//h3, .h3
+//  font-size: 1.25rem
+//  line-height: 1.5rem
+//  font-weight: 500
+//  text-align: center
+//  @include breakpoint($md-up)
+//    font-size: 1.5rem
+//    line-height: 1.75rem
+//
+//h4, .h4
+//  font-size: 1.25rem
+//  line-height: 1.5rem
+//  font-weight: 500
+
+
+
+/**
+  **
+  ** =Button
+  **
+  **
+
+
+
+
+
+/**
+ **
+ ** =header
+ **
+ **
+
+header
+  position: relative
+  width: 100%
+  height: 60px
+  background-color: $dark-blue
+  z-index: 100
+  .header-wrap
+    max-width: 1040px
+    height: 100%
+    padding: 0 20px
+    margin: 0 auto
+  .logo
+    float: left
+    margin-top: 16px
+    height: 36px
+    img
+      height: 36px
+  .btn-menu
+    position: relative
+    float: right
+    width: 44px
+    height: 44px
+    padding: 0
+    margin-top: 8px
+    background-color: $dark-blue
+    transition: .3s ease-in-out
+    cursor: pointer
+    &:hover,&:active
+      .line
+        background-color: $light-blue
+    .line
+      position: absolute
+      left: 50%
+      top: 50%
+      width: 28px
+      height: 2px
+      border-radius: 4px
+      background-color: $white8
+      transform:  translateX(-50%) translateY(-50%)
+      transition: .25s ease-in-out
+    .line1
+      transform:  translateX(-50%) translateY(8px)
+    .line2
+      transform:  translateX(-50%)
+    .line3
+      transform:  translateX(-50%) translateY(-8px)
+    &.opened
+      .line1
+        transform:  translateX(-50%) translateY(0px) rotate(45deg)
+      .line2
+        display: none
+      .line3
+        transform:  translateX(-50%) translateY(0px) rotate(-45deg)
+
+  @include breakpoint($sm-up)
+    .header-wrap
+      padding: 0 40px
+  @include breakpoint($md-up)
+    background-color: $blue
+  @include breakpoint($lg-up)
+    .header-wrap
+      padding: 0
+
+nav
+  display: none
+  position: absolute
+  top: 61px
+  left: 0
+  z-index: 10
+  width: 100%
+  padding: 12px 20px 20px
+  letter-spacing: 0.5px
+  background-color: $dark-blue
+  height: calc(100vh - 62px)
+  overflow-y: auto
+  .menu-list
+    li
+      text-align: center
+      padding: 20px 0 20px 0
+      cursor: pointer
+      a
+        position: relative
+        color: $white8
+        font-size: 1rem
+      &:hover,&:active
+        background-color: $white1
+        a
+          color: $light-blue
+  @include breakpoint($md-up)
+    display: block
+    position: relative
+    top: auto
+    left: auto
+    float: right
+    width: auto
+    height: auto
+    background-color: $blue
+    overflow-y: visible
+    padding: 0 0 20px 0
+    .menu-list
+      > li
+        position: relative
+        float: left
+        padding: 0
+        > a
+          line-height: 60px
+          color: $white6
+          font-size: 0.8rem
+          &::before
+            content: ''
+            position: absolute
+            bottom: -20px
+            left: 0
+            width: 0
+            height: 2px
+            border-radius: 2px
+            background-color: $light-blue
+            transition: .25s
+        &:hover, &.active
+          background-color: $blue
+          > a
+            color: $light-blue
+            &::before
+              width: 100%
+        &:not(:last-child)
+          margin-right: 60px
+
+
+/**
+ **
+ ** =main
+ **
+ **
+
+main
+  *
+    position: relative
+  .main-wrap
+    max-width: 1040px
+    padding: 0 20px
+  @include breakpoint($sm-up)
+    .main-wrap
+      padding: 0 40px
+
+
+
+/**
+ **
+ ** =footer
+ **
+ **
+
+footer
+  padding: 24px 0
+  background-color: $dark-blue
+  margin-top: 40px
+  .footer-wrap
+    max-width: 1040px
+    margin: 0 auto
+    padding: 0 20px
+  .copyright
+    color: $white6
+    font-size: 0.8rem
+    line-height: 1.5rem
+    letter-spacing: 0.5px
+    text-align: center
+  @include breakpoint($sm-up)
+    .footer-wrap
+      padding: 0 40px
+
+

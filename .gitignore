@@ -3,3 +3,7 @@
 # Useful .gitignore templates: https://github.com/github/gitignore
 
 tile4\.png
+
+node_modules/
+
+presass/

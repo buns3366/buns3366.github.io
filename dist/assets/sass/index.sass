@@ -1,0 +1,140 @@
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +common
+ *    +header
+ *		=
+ *    +main
+ *		=
+ *    +footer
+ *		=
+ *-----------------------------------------------------------------------------
+
+/* +common
+ **----------------------------------------------------------------------------
+
+@import variable
+@import mixin
+
+/**
+ **
+ ** =header
+ **
+ **
+
+header
+//#aboutLink
+//  display: none
+
+/**
+ **
+ ** =main
+ **
+ **
+
+main
+  //*
+  //  border: solid 1px #fff
+
+// == main =====
+#main
+  .bg-circles
+    position: relative
+    left: 50%
+    transform: translateX(-48%)
+    height: 540px
+    background-image: url("../img/bg-circles.png")
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center 8px
+    animation: bg-circle 4s infinite
+  .circle-block
+    position: absolute
+    top: 90px
+    left: 0
+    width: 100%
+    height: 600px
+    .bg-lines
+      width: 100%
+      min-width: 1000px
+      height: 600px
+      background-image: url("../img/bg-lines.svg")
+      background-repeat: no-repeat
+      background-size: contain
+      overflow: hidden
+    .fluid
+      position: absolute
+      top: -40px
+      left: calc(50% - 150px)
+      width: 320px
+      height: 320px
+      background: $gradient-blue
+      border-radius: 100%
+      animation: rotate 30s infinite
+      box-shadow: 0 0 40px rgba(0,0,0,0.6)
+    .circle-logo
+      position: absolute
+      top: 46px
+      left: 50%
+      width: 190px
+      transform: translateX(-50%)
+  .explore
+    position: relative
+    top: -90px
+    left: 50%
+    transform: translateX(-50%)
+    display: inline-block
+    text-align: center
+    font-size: 0.7rem
+    .arrow-down
+      width: 10px
+      margin-bottom: 10px
+      animation: updown 1.5s infinite
+  @include breakpoint($md-up)
+
+@keyframes bg-circle
+  0%
+    transform: translateX(-48%) translateY(0) scale(1)
+  50%
+    transform: translateX(-48%) translateY(-2px) scale(1.005)
+  100%
+    transform: translateX(-48%) translateY(0) scale(1)
+
+@keyframes  rotate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(359deg)
+
+@keyframes updown
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(4px)
+  100%
+    transform: translateY(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ **
+ ** =footer
+ **
+ **
+
+footer
+  margin-top: 0
+  @include breakpoint($sm-up)
+    margin-top: 40px
+  @include breakpoint($md-up)
+    margin-top: 80px

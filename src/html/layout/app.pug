@@ -1,0 +1,65 @@
+block vars
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0')
+    title Sinyi-Creative Developer
+    meta(property='og:title', content='Sinyi-Creative Developer')
+    meta(property='og:image' content='assets/cms/images/og.png')
+    meta(property='og:url', content='')
+    meta(property='og:description', content='')
+    meta(name='keywords', content='Portfolio,works,resume,front-end,design')
+    meta(name='description', content='Sinyi-Creative Developer')
+    meta(name='format-detection' content='telephone=no')
+    link(rel='stylesheet', href='assets/css/bootstrap-reset-breakpoint.css')
+    link(rel='stylesheet', href='assets/css/module/noto-sans-tc.css')
+    link(rel='stylesheet', href='assets/css/layout.css')
+    link(rel='stylesheet', href='assets/css/style.css')
+    block pages-css
+  body
+    // ============================== header start =============================
+    block header
+      header
+        .header-wrap.opened.clearfix
+          .logo
+            a(href='index.html')
+              img(src='assets/img/logo-sinyi.svg')
+          button.btn-menu.d-block.d-md-none(type="button")
+            .line.line1
+            .line.line2
+            .line.line3
+          nav
+            ul.menu-list
+              li
+                a(href='#')
+                  | ABOUT
+              li
+                a(href='#')
+                  | SKILLS
+              li
+                a(href='#')
+                  | WORKS
+    // ============================== header close =============================
+
+    // ============================== main start ===============================
+    block content
+    // ============================== main close ===============================
+
+    // ============================== footer start =============================
+    block footer
+      footer
+        article.footer-wrap
+          section.copyright
+            p ©版權所有 SinyiLin 2019 All rights reserved.
+
+    // ============================== footer close =============================
+
+    // Common
+    script(src='assets/js/module/jquery-3.4.1.min.js')
+    script(src='assets/js/bootstrap/bootstrap.min.js')
+    script(src='assets/js/bootstrap/bootstrap.bundle.min.js')
+    script(src='assets/js/portfolio.js')
+    // Pages
+    block pages-js
+doctype html

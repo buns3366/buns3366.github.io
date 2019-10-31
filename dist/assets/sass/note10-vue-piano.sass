@@ -1,0 +1,99 @@
+$color_white: #eee
+$color_black: #585858
+$key_width: 44px
+$key_height: 180px
+
+h4,h2
+  text-align: center
+*
+  position: relative
+  font-family: 微軟正黑體
+
+.centerbox
+  display: block
+  margin: 10px 10px
+  text-align: center
+  
+.keyboard
+  position: relative
+  display: inline-block
+  margin: 30px 10px
+  box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.4)
+  
+.pianokey
+  position: relative
+  display: inline-block
+  vertical-align: top
+  cursor: pointer
+  text-align: center
+  &:active, &:hover
+  
+  .label
+    position: absolute
+    font-size: 12px
+    color: #aaa
+    bottom: -24px
+    left: 50%
+    transform: translateX(-50%)
+    
+  .white
+    position: relative
+    top: 0
+    left: 0
+    width: $key_width
+    height: $key_height
+    border: solid 1px $color_white
+    background-color: #fff
+    transform: translate(-3px,-3px)
+    transition: 0.1s
+    &:hover
+      background-color: darken(#fff,5)
+      transform: translate(0,0)
+    &.playing
+      background-color: darken(#fff,5)
+      transform: translate(0,0)
+    
+  .black
+    position: absolute
+    top: 0
+    right: -$key_width/4
+    transform: translate(-3px,-3px)
+    width: $key_width/2
+    height: $key_height/2
+    background-color: $color_black
+    z-index: 10
+    transition: 0.1s
+    &:hover
+      background-color: darken($color_black,10)
+      transform: translate(0,0)
+    &.playing
+      background-color: darken($color_black,10)
+      transform: translate(0,0)
+button
+  background-color: transparent
+  border: none
+  border: solid 1px $color_black
+  padding: 4px 12px
+  border-radius: 4px
+  transition: 0.2s
+  &:hover
+    background-color: #444
+    color: white
+
+li
+  display: inline-block
+  border: solid 1px #fff
+  background-color: #efefef
+  padding: 5px 2px
+  .num
+    font-size: 16px
+    color: rgba(0,0,0,0.7)
+  .time
+    font-size: 12px
+    color: rgba(0,0,0,0.5)
+  &.playing
+    background-color: darken($color_white,10)
+i
+  margin-left: 4px
+  &.fa-circle
+    color: darken(red,10)

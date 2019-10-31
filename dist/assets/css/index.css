@@ -1,0 +1,191 @@
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +common
+ *    +header
+ *		=
+ *    +main
+ *		=
+ *    +footer
+ *		=
+ *----------------------------------------------------------------------------- */
+/* +common
+ **---------------------------------------------------------------------------- */
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +Breakpoint
+ *    +Color
+ *----------------------------------------------------------------------------- */
+/* +Breakpoint
+ **---------------------------------------------------------------------------- */
+/* +Color
+ **---------------------------------------------------------------------------- */
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +Breakpoint
+ *----------------------------------------------------------------------------- */
+/* +Breakpoint
+ **---------------------------------------------------------------------------- */
+/**
+ **
+ ** =header
+ **
+ ** */
+/**
+ **
+ ** =main
+ **
+ ** */
+#main {
+  padding-top: 12px;
+}
+
+#main .bg-circles {
+  position: relative;
+  left: 50%;
+  transform: translateX(-48%);
+  height: 540px;
+  background-image: url("../img/bg-circles.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center 8px;
+  animation: bg-circle 4s infinite;
+  overflow-x: hidden;
+}
+
+#main .circle-block {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: 600px;
+}
+
+#main .circle-block .bg-lines {
+  width: 100%;
+  height: 600px;
+  background-image: url("../img/bg-lines.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  overflow-x: hidden;
+}
+
+#main .circle-block .fluid {
+  position: absolute;
+  top: -40px;
+  left: calc(50% - 150px);
+  width: 320px;
+  height: 320px;
+  background: linear-gradient(256deg, #76e2e5, #58bed0);
+  border-radius: 100%;
+  animation: rotate 30s infinite;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+#main .circle-block .circle-logo {
+  position: absolute;
+  top: 46px;
+  left: 50%;
+  width: 190px;
+  transform: translateX(-50%);
+}
+
+#main .explore {
+  position: relative;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+#main .explore .arrow-down {
+  width: 12px;
+  margin-bottom: 10px;
+  animation: updown 1.5s infinite;
+}
+
+#main .explore p {
+  color: #76e2e5;
+  font-size: 0.75rem;
+}
+
+@keyframes bg-circle {
+  0% {
+    transform: translateX(-48%) translateY(0) scale(1);
+  }
+  50% {
+    transform: translateX(-48%) translateY(-2px) scale(1.005);
+  }
+  100% {
+    transform: translateX(-48%) translateY(0) scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#about .bg-cat {
+  background-image: url("../img/bg-cat.svg");
+}
+
+#about .intro {
+  max-width: 660px;
+  padding: 10px 40px 40px 40px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.6);
+  margin: 160px auto 80px auto;
+}
+
+#about .intro p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 400;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  padding-bottom: 16px;
+}
+
+#about .intro .highlight {
+  color: #76e2e5;
+  padding: 0 8px;
+}
+
+/**
+ **
+ ** =footer
+ **
+ ** */
+footer {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    margin-top: 80px;
+  }
+}

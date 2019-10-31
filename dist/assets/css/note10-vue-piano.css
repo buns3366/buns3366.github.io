@@ -1,0 +1,114 @@
+@charset "UTF-8";
+h4, h2 {
+  text-align: center;
+}
+
+* {
+  position: relative;
+  font-family: 微軟正黑體;
+}
+
+.centerbox {
+  display: block;
+  margin: 10px 10px;
+  text-align: center;
+}
+
+.keyboard {
+  position: relative;
+  display: inline-block;
+  margin: 30px 10px;
+  box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.4);
+}
+
+.pianokey {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+}
+.pianokey .label {
+  position: absolute;
+  font-size: 12px;
+  color: #aaa;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pianokey .white {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 180px;
+  border: solid 1px #eee;
+  background-color: #fff;
+  transform: translate(-3px, -3px);
+  transition: 0.1s;
+}
+.pianokey .white:hover {
+  background-color: #f2f2f2;
+  transform: translate(0, 0);
+}
+.pianokey .white.playing {
+  background-color: #f2f2f2;
+  transform: translate(0, 0);
+}
+.pianokey .black {
+  position: absolute;
+  top: 0;
+  right: -11px;
+  transform: translate(-3px, -3px);
+  width: 22px;
+  height: 90px;
+  background-color: #585858;
+  z-index: 10;
+  transition: 0.1s;
+}
+.pianokey .black:hover {
+  background-color: #3f3f3f;
+  transform: translate(0, 0);
+}
+.pianokey .black.playing {
+  background-color: #3f3f3f;
+  transform: translate(0, 0);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  border: solid 1px #585858;
+  padding: 4px 12px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button:hover {
+  background-color: #444;
+  color: white;
+}
+
+li {
+  display: inline-block;
+  border: solid 1px #fff;
+  background-color: #efefef;
+  padding: 5px 2px;
+}
+li .num {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+}
+li .time {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+li.playing {
+  background-color: #d5d5d5;
+}
+
+i {
+  margin-left: 4px;
+}
+i.fa-circle {
+  color: #cc0000;
+}

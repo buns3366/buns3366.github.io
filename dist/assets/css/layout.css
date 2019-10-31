@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +common
+ *		=clear,clearfix
+ *----------------------------------------------------------------------------- */
+/* +common
+ **---------------------------------------------------------------------------- */
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +Breakpoint
+ *    +Color
+ *----------------------------------------------------------------------------- */
+/* +Breakpoint
+ **---------------------------------------------------------------------------- */
+/* +Color
+ **---------------------------------------------------------------------------- */
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +Breakpoint
+ *----------------------------------------------------------------------------- */
+/* +Breakpoint
+ **---------------------------------------------------------------------------- */
+html, body {
+  background-color: #273040;
+  color: #76e2e5;
+  font-family: "微軟正黑體", 'sans-serif';
+  font-size: 16px;
+}
+
+/**
+ **
+ ** =clear,clearfix
+ **
+ ** */
+.clear {
+  clear: both;
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix::after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  font-size: 0;
+  content: ".";
+}
+
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+button {
+  border: 0;
+}
+
+/**
+  **
+  ** =IE input
+  **
+  ** */
+::-ms-clear, ::-ms-reveal {
+  display: none;
+}

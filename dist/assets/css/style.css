@@ -1,0 +1,319 @@
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +common
+ *    +header
+ *		=
+ *    +main
+ *		=
+ *    +footer
+ *		=
+ *----------------------------------------------------------------------------- */
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +Breakpoint
+ *    +Color
+ *----------------------------------------------------------------------------- */
+/* +Breakpoint
+ **---------------------------------------------------------------------------- */
+/* +Color
+ **---------------------------------------------------------------------------- */
+/*-----------------------------------------------------------------------------
+ * [TABLE OF CONTENTS]
+ *    +Breakpoint
+ *----------------------------------------------------------------------------- */
+/* +Breakpoint
+ **---------------------------------------------------------------------------- */
+/* +common
+ **---------------------------------------------------------------------------- */
+/**
+ **
+ ** =Typography
+ **
+ ** */
+h1, .h1 {
+  display: none;
+}
+
+h2, .h2 {
+  font-size: 2.5rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: #FFF;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  h2, .h2 {
+    font-size: 4rem;
+    line-height: 8rem;
+  }
+}
+
+h3, .h3 {
+  font-size: 2.5rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: #FFF;
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  h3, .h3 {
+    font-size: 4rem;
+    line-height: 8rem;
+  }
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/**
+  **
+  ** =Button
+  **
+  ** */
+/**
+ **
+ ** =header
+ **
+ ** */
+header {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: #131820;
+  z-index: 100;
+}
+
+header .header-wrap {
+  max-width: 1040px;
+  height: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+header .logo {
+  float: left;
+  margin-top: 16px;
+  height: 36px;
+}
+
+header .logo img {
+  height: 36px;
+}
+
+header .btn-menu {
+  position: relative;
+  float: right;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin-top: 8px;
+  background-color: #131820;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+header .btn-menu:hover .line, header .btn-menu:active .line {
+  background-color: #76e2e5;
+}
+
+header .btn-menu .line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 28px;
+  height: 2px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateX(-50%) translateY(-50%);
+  transition: .25s ease-in-out;
+}
+
+header .btn-menu .line1 {
+  transform: translateX(-50%) translateY(8px);
+}
+
+header .btn-menu .line2 {
+  transform: translateX(-50%);
+}
+
+header .btn-menu .line3 {
+  transform: translateX(-50%) translateY(-8px);
+}
+
+header .btn-menu.opened .line1 {
+  transform: translateX(-50%) translateY(0px) rotate(45deg);
+}
+
+header .btn-menu.opened .line2 {
+  display: none;
+}
+
+header .btn-menu.opened .line3 {
+  transform: translateX(-50%) translateY(0px) rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+  header .header-wrap {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    background-color: #273040;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  header .header-wrap {
+    padding: 0;
+  }
+}
+
+nav {
+  display: none;
+  position: absolute;
+  top: 61px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 12px 20px 20px;
+  letter-spacing: 0.5px;
+  background-color: #131820;
+  height: calc(100vh - 62px);
+  overflow-y: auto;
+}
+
+nav .menu-list li {
+  text-align: center;
+  padding: 20px 0 20px 0;
+  cursor: pointer;
+}
+
+nav .menu-list li a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+nav .menu-list li:hover, nav .menu-list li:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav .menu-list li:hover a, nav .menu-list li:active a {
+  color: #76e2e5;
+}
+
+@media screen and (min-width: 1024px) {
+  nav {
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    float: right;
+    width: auto;
+    height: auto;
+    background-color: #273040;
+    overflow-y: visible;
+    padding: 0 0 20px 0;
+  }
+  nav .menu-list > li {
+    position: relative;
+    float: left;
+    padding: 0;
+  }
+  nav .menu-list > li > a {
+    line-height: 60px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+  }
+  nav .menu-list > li > a::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #76e2e5;
+    transition: .25s;
+  }
+  nav .menu-list > li:hover, nav .menu-list > li.active {
+    background-color: #273040;
+  }
+  nav .menu-list > li:hover > a, nav .menu-list > li.active > a {
+    color: #76e2e5;
+  }
+  nav .menu-list > li:hover > a::before, nav .menu-list > li.active > a::before {
+    width: 100%;
+  }
+  nav .menu-list > li:not(:last-child) {
+    margin-right: 60px;
+  }
+}
+
+/**
+ **
+ ** =main
+ **
+ ** */
+main * {
+  position: relative;
+}
+
+main .main-wrap {
+  max-width: 1040px;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+  main .main-wrap {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .main-wrap {
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+/**
+ **
+ ** =footer
+ **
+ ** */
+footer {
+  padding: 24px 0;
+  background-color: #131820;
+  margin-top: 40px;
+}
+
+footer .footer-wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer .copyright {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  footer .footer-wrap {
+    padding: 0 40px;
+  }
+}

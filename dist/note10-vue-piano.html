@@ -1,0 +1,46 @@
+
+<meta charset="UTF-8"/>
+<title>Piano (Vue+ajax)</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+<link rel="stylesheet" href="assets/css/note10-vue-piano.css"/>
+<!--  partial:index.partial.html-->
+<div id="app">
+  <div class="audioplayer" v-for="s in sounddata">
+    <audio v-bind:data-num="s.number">
+      <source v-bind:src="s.url"/>
+    </audio>
+  </div>
+  <div class="centerbox">
+    <h2>Piano</h2>
+    <div class="keyboard">
+      <div class="pianokey" v-for="p in display_keys">
+        <div class="white" v-if="p.type==&quot;white&quot;" v-on:click="addnote(p.num)" v-bind:class="get_current_highlight(p.num,p.key)?&quot;playing&quot;:&quot;&quot;">
+          <div class="label">{{String.fromCharCode(p.key)}}</div>
+        </div>
+        <div class="black" v-if="p.type==&quot;black&quot;" v-on:click="addnote(p.num)" v-bind:class="get_current_highlight(p.num,p.key)?&quot;playing&quot;:&quot;&quot;">
+          <div class="label">{{String.fromCharCode(p.key)}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <ul v-if="notes.length &gt; 0">
+        <li v-for="(n,id) in notes" v-bind:class="now_note_id-1 == id?&quot;playing&quot;:&quot;&quot;">
+          <div class="num">{{n.num}}</div>
+          <div class="time">{{n.time}}</div>
+        </li>
+      </ul>
+      <button v-on:click="load_sample">Dodoro</button>
+      <button v-on:click="playnext(1)">Play next    </button>
+      <button v-if="playing_time&lt;=1" v-on:click="startplay()">Start play<i class="fa fa-play"></i></button>
+      <button v-if="playing_time&gt;1" v-on:click="stopplay()">Stop play<i class="fa fa-pause"></i></button>
+      <button v-if="record_time&lt;=1" v-on:click="startrecord()">Record<i class="fa fa-circle"></i></button>
+      <button v-if="record_time&gt;1" v-on:click="stoprecord()">Stop record<i class="fa fa-stop"></i></button>
+      <button v-on:click="notes=[]">Clear</button><br/>
+      <h4>{{record_time+playing_time}}</h4>
+    </div>
+  </div>
+</div>
+<!--  partial-->
+<script src="assets/js/module/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+<script src="assets/js/note10-vue-piano.js"></script>
