@@ -144,15 +144,26 @@
 }
 
 #about .bg-cat {
+  position: absolute;
+  top: -160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 300px;
   background-image: url("../img/bg-cat.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  opacity: 0.2;
 }
 
 #about .intro {
   max-width: 660px;
-  padding: 10px 40px 40px 40px;
+  padding: 24px 40px 40px 40px;
   border: solid 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.6);
-  margin: 160px auto 80px auto;
+  margin: 140px auto 80px auto;
+  background-color: #273040;
 }
 
 #about .intro p {
@@ -167,6 +178,88 @@
 #about .intro .highlight {
   color: #76e2e5;
   padding: 0 8px;
+}
+
+#about .intro .hand {
+  position: absolute;
+  width: 36px;
+  height: 28px;
+  border-radius: 10px 10px 20px 20px;
+  border: solid 2px rgba(118, 226, 229, 0.2);
+  background-color: #273040;
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+#about .intro .hand.hand-l {
+  top: -10px;
+  left: calc(50% - 150px);
+  transform: rotate(-12deg);
+}
+
+#about .intro .hand.hand-r {
+  top: -10px;
+  left: calc(50% + 105px);
+  transform: rotate(12deg);
+}
+
+@media screen and (min-width: 768px) {
+  #about .bg-cat {
+    top: -210px;
+    width: 360px;
+    height: 400px;
+  }
+  #about .intro .hand {
+    width: 46px;
+    height: 32px;
+  }
+  #about .intro .hand.hand-l {
+    top: -10px;
+    left: 130px;
+  }
+  #about .intro .hand.hand-r {
+    top: -10px;
+    left: 476px;
+  }
+}
+
+#skills ul {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#skills ul li.skill-content {
+  width: 100%;
+  padding: 24px 60px;
+}
+
+#skills ul li img {
+  display: block;
+  width: 160px;
+  height: auto;
+  margin: 0 auto;
+}
+
+#skills ul li .des {
+  display: block;
+  margin: 12px auto 12px auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  #skills ul li.skill-content {
+    float: left;
+    width: 50%;
+    padding: 24px 20px;
+  }
+  #skills ul li img {
+    display: inline-block;
+    width: 110px;
+    height: auto;
+  }
+  #skills ul li .des {
+    display: inline-block;
+    margin-left: 12px;
+  }
 }
 
 /**
