@@ -24,31 +24,42 @@
 h1, .h1
   display: none
 
-//h2, .h2
-//  font-size: 1.25rem
-//  line-height: 1.5rem
-//  font-weight: 400
-//  color: #FFF
-//  text-align: center
-//  @include breakpoint($md-up)
-//    font-size: 1.5rem
-//    line-height: 1.75rem
-//
-//h3, .h3
-//  font-size: 1.25rem
-//  line-height: 1.5rem
-//  font-weight: 500
-//  text-align: center
-//  @include breakpoint($md-up)
-//    font-size: 1.5rem
-//    line-height: 1.75rem
-//
-//h4, .h4
-//  font-size: 1.25rem
-//  line-height: 1.5rem
-//  font-weight: 500
+h2, .h2
+  font-size: 2.5rem
+  line-height: 4rem
+  font-weight: 900
+  color: #FFF
+  text-align: center
+  padding-bottom: 8px
+  @include breakpoint($sm-up)
+    font-size: 4rem
+    line-height: 8rem
 
+h3, .h3
+  font-size: 2.5rem
+  line-height: 4rem
+  font-weight: 900
+  color: #FFF
+  text-align: center
+  padding-bottom: 8px
+  @include breakpoint($sm-up)
+    font-size: 4rem
+    line-height: 8rem
 
+h4, .h4
+  font-size: 1.5rem
+  line-height: 1.75rem
+  font-weight: 600
+  text-align: left
+  padding-bottom: 12px
+  padding-top: 8px
+
+p
+  font-size: 1rem
+  line-height: 1.5rem
+  font-weight: 300
+  color: $white8
+  text-align: left
 
 /**
   **
@@ -70,7 +81,6 @@ header
   position: relative
   width: 100%
   height: 60px
-  background-color: $dark-blue
   z-index: 100
   .header-wrap
     max-width: 1040px
@@ -78,9 +88,12 @@ header
     padding: 0 20px
     margin: 0 auto
   .logo
+    position: relative
     float: left
     margin-top: 16px
     height: 36px
+    display: none
+    z-index: 31
     img
       height: 36px
   .btn-menu
@@ -90,9 +103,10 @@ header
     height: 44px
     padding: 0
     margin-top: 8px
-    background-color: $dark-blue
+    background: none
     transition: .3s ease-in-out
     cursor: pointer
+    z-index: 30
     &:hover,&:active
       .line
         background-color: $light-blue
@@ -112,13 +126,23 @@ header
       transform:  translateX(-50%)
     .line3
       transform:  translateX(-50%) translateY(-8px)
-    &.opened
+  &.scrolled
+    position: fixed
+    background-color: $dark-blue8
+    .logo
+      display: block
+  &.opened
+    background-color: $dark-blue
+    .logo
+      display: block
+    .btn-menu
       .line1
         transform:  translateX(-50%) translateY(0px) rotate(45deg)
       .line2
         display: none
       .line3
         transform:  translateX(-50%) translateY(0px) rotate(-45deg)
+
 
   @include breakpoint($sm-up)
     .header-wrap
@@ -130,17 +154,20 @@ header
       padding: 0
 
 nav
-  display: none
   position: absolute
-  top: 61px
+  top: 0
   left: 0
   z-index: 10
   width: 100%
-  padding: 12px 20px 20px
+  padding: 72px 20px 20px
   letter-spacing: 0.5px
   background-color: $dark-blue
-  height: calc(100vh - 62px)
+  height: 100vh
   overflow-y: auto
+  transform: translateY(-100%)
+  transition: 0.3s
+  &.opened
+    transform: translateY(0)
   .menu-list
     li
       text-align: center
@@ -162,9 +189,11 @@ nav
     float: right
     width: auto
     height: auto
-    background-color: $blue
     overflow-y: visible
-    padding: 0 0 20px 0
+    padding: 0 0 0 0
+    background: none
+    transition: none
+    transform: translateY(0)
     .menu-list
       > li
         position: relative
@@ -172,7 +201,7 @@ nav
         padding: 0
         > a
           line-height: 60px
-          color: $white6
+          color: $white8
           font-size: 0.8rem
           &::before
             content: ''
@@ -185,7 +214,7 @@ nav
             background-color: $light-blue
             transition: .25s
         &:hover, &.active
-          background-color: $blue
+          background: none
           > a
             color: $light-blue
             &::before
@@ -209,6 +238,10 @@ main
   @include breakpoint($sm-up)
     .main-wrap
       padding: 0 40px
+  @include breakpoint($md-up)
+    .main-wrap
+      padding: 0
+      margin: 0 auto
 
 
 

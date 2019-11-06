@@ -2,36 +2,36 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="177.251px" height="170.562px" viewBox="0 0 177.251 170.562" enable-background="new 0 0 177.251 170.562"
+	 width="119.525px" height="104.355px" viewBox="0 0 119.525 104.355" enable-background="new 0 0 119.525 104.355"
 	 xml:space="preserve">
 <g id="圖層_1">
-	<rect x="-490" y="-321" display="none" fill="#273040" width="720" height="1205"/>
-	<path fill="#1A212B" d="M176.015,133.134c4.052,20.27-39.547,37.428-88.329,37.428s-92.943-17.279-88.328-37.428
-		c5.503-24.03,39.546-37.429,88.328-37.429S171.211,109.104,176.015,133.134z"/>
-	<path fill="#76E2E5" d="M162.001,95.251c0,24.216-5.926,43.847-37.609,43.847c-20.771,0-34.381-19.925-37.609-43.847
-		c-3.19-23.65,15.499-38.531,37.609-43.846C144.735,46.515,162.001,71.036,162.001,95.251z"/>
-	<polygon fill="#76E2E5" points="17.877,44.357 22.848,39.921 34.152,49.355 49.139,32.797 55.283,39.431 35.748,60.318 	"/>
-	<polygon fill="#76E2E5" points="17.877,80.018 22.848,75.584 34.152,85.015 49.139,68.458 55.283,75.094 35.748,95.979 	"/>
-	<polygon fill="#76E2E5" points="17.877,113.876 22.848,109.441 34.152,118.873 49.139,102.315 55.283,108.951 35.748,129.837 	"/>
+	<rect x="-459" y="-864" display="none" fill="#273040" width="720" height="1205"/>
 	<g>
+		<path fill="#76E2E5" d="M60.276,72.898c0-11.229,9.722-20.01,20.95-20.01C87.25,52.889,92,55.835,97,59.996v-28.15
+			C97,28.842,93.33,25,90.326,25h-54.42C32.902,25,31,28.842,31,31.846v50.007C31,84.856,32.902,86,35.906,86h29.725
+			C62.308,85,60.276,78.2,60.276,72.898z"/>
+		<circle fill="#76E2E5" cx="89.515" cy="76.541" r="19.192"/>
 		
-			<polygon fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-			14.218,36.966 19.188,32.533 30.491,41.963 45.48,25.406 51.624,32.041 32.089,52.926 		"/>
+			<polyline fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			31.645,36.49 35.492,40.852 44.616,32.133 		"/>
 		
-			<polygon fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-			14.218,70.629 19.188,66.194 30.491,75.626 45.48,59.069 51.624,65.702 32.089,86.588 		"/>
+			<polyline fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			31.645,53.072 35.492,57.433 44.616,48.715 		"/>
 		
-			<polygon fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
-			14.218,106.486 19.188,102.052 30.491,111.482 45.48,94.927 51.624,101.561 32.089,122.444 		"/>
-		<path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-			M155.5,40.327c0,2.444-1.185,4.173-2.646,4.173H67.146c-1.462,0-2.646-1.729-2.646-4.173v-1.184c0-2.444,1.185-4.643,2.646-4.643
-			h85.707c1.462,0,2.646,2.199,2.646,4.643V40.327z"/>
-		<path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-			M155.5,72.856c0,2.445-1.185,4.644-2.646,4.644H67.146c-1.462,0-2.646-2.198-2.646-4.644v-1.183c0-2.444,1.185-4.173,2.646-4.173
-			h85.707c1.462,0,2.646,1.729,2.646,4.173V72.856z"/>
-		<path fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
-			M155.5,109.389c0,2.442-1.185,4.111-2.646,4.111H67.146c-1.462,0-2.646-1.669-2.646-4.111v-1.187c0-2.442,1.185-3.702,2.646-3.702
-			h85.707c1.462,0,2.646,1.26,2.646,3.702V109.389z"/>
+			<polyline fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			31.645,69.654 35.492,74.014 44.616,65.296 		"/>
+		
+			<circle fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="80.608" cy="73.545" r="20.332"/>
+		
+			<polyline fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			78.5,61 78.5,73.5 92,73.5 		"/>
+		
+			<line fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="56" y1="35.5" x2="78" y2="35.5"/>
+		
+			<line fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="56" y1="50.5" x2="63" y2="50.5"/>
+		<path fill="#FFFFFF" d="M55.8,84H22.848C20.921,84,18,81.429,18,79.502V19.67c0-1.928,2.921-3.67,4.848-3.67h65.271
+			C90.047,16,92,17.742,92,19.67v29.716c2,0.621,3,1.347,5,2.179V19.67C97,15.6,92.189,12,88.118,12H22.848
+			C18.777,12,15,15.6,15,19.67v59.832C15,83.572,18.777,86,22.848,86h34.81C56.938,85,56.313,85,55.8,84z"/>
 	</g>
 </g>
 <g id="網頁設計1" display="none">

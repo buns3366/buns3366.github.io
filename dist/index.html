@@ -22,7 +22,6 @@
     <!-- ============================== header start =============================-->
     <header>
       <div class="header-wrap opened clearfix">
-        <div class="logo"><a href="index.html"><img src="assets/img/logo-sinyi.svg"/></a></div>
         <button class="btn-menu d-block d-md-none" type="button">
           <div class="line line1"></div>
           <div class="line line2"></div>
@@ -30,11 +29,12 @@
         </button>
         <nav>
           <ul class="menu-list">
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SKILLS</a></li>
-            <li><a href="#">WORKS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#works">WORKS</a></li>
           </ul>
         </nav>
+        <div class="logo"><a href="index.html"><img src="assets/img/logo-sinyi.svg"/></a></div>
       </div>
     </header>
     <!-- ============================== header close =============================-->
@@ -50,13 +50,13 @@
             <div class="fluid"></div><img class="circle-logo" src="assets/img/logo-siniy.png"/>
           </div>
           <div class="explore"><img class="arrow-down" src="assets/img/arrow-down.svg"/>
-            <p>EXPLORE</p>
+            <p>MORE</p>
           </div>
         </section>
       </article>
       <!-- == ABOUT =====-->
-      <article class="main-wrap" id="about">
-        <section>
+      <article id="about">
+        <section class="main-wrap">
           <div class="bg-cat"></div>
           <div class="intro">
             <h2>Hello,I am Sinyi</h2>
@@ -68,53 +68,133 @@
         </section>
       </article>
       <!-- == SKILLS =====-->
-      <article class="main-wrap" id="skills">
-        <section>
+      <article class="skills" id="skills">
+        <section class="main-wrap">
           <h3>Skills</h3>
           <ul>
-            <li class="skill-content"><img src="assets/img/icon-html.svg"/>
-              <div class="des">
+            <li class="skill-content">
+              <figure><img src="assets/img/icon-html.svg"/></figure>
+              <figcaption>
                 <h4>HTML</h4>
                 <p>Pug/ Semantic Elements</p>
-              </div>
+              </figcaption>
             </li>
-            <li class="skill-content"><img src="assets/img/icon-html.svg"/>
-              <div class="des">
-                <h4>HTML</h4>
-                <p>Pug/ Semantic Elements</p>
-              </div>
+            <li class="skill-content">
+              <figure><img src="assets/img/icon-css.svg"/></figure>
+              <figcaption>
+                <h4>CSS</h4>
+                <p>Sass (Pre-processors) /</p>
+                <p>Bootstrap/</p>
+                <p>Media Query (RWD)/ Hack</p>
+              </figcaption>
             </li>
-            <li class="skill-content"><img src="assets/img/icon-html.svg"/>
-              <div class="des">
-                <h4>HTML</h4>
-                <p>Pug/ Semantic Elements</p>
-              </div>
+            <li class="skill-content">
+              <figure><img src="assets/img/icon-js.svg"/></figure>
+              <figcaption>
+                <h4>Javascript</h4>
+                <p>JQuery/ VueJS/ AJAX</p>
+              </figcaption>
             </li>
-            <li class="skill-content"><img src="assets/img/icon-html.svg"/>
-              <div class="des">
-                <h4>HTML</h4>
-                <p>Pug/ Semantic Elements</p>
-              </div>
+            <li class="skill-content">
+              <figure><img src="assets/img/icon-git.svg"/></figure>
+              <figcaption>
+                <h4>Git 版本管控</h4>
+                <p>多人協作/ git版本管理與分支操作</p>
+              </figcaption>
             </li>
-            <li class="skill-content"><img src="assets/img/icon-html.svg"/>
-              <div class="des">
-                <h4>HTML</h4>
-                <p>Pug/ Semantic Elements</p>
-              </div>
+            <li class="skill-content">
+              <figure><img src="assets/img/icon-design.svg"/></figure>
+              <figcaption>
+                <h4>Design</h4>
+                <p>視覺設計、UI/UX設計等，擅長Adobe Photoshop、Adobe Illustrator。</p>
+              </figcaption>
             </li>
-            <li class="skill-content"><img src="assets/img/icon-html.svg"/>
-              <div class="des">
-                <h4>HTML</h4>
-                <p>Pug/ Semantic Elements</p>
-              </div>
+            <li class="skill-content">
+              <figure><img src="assets/img/icon-plan.svg"/></figure>
+              <figcaption>
+                <h4>Project manage/ Plan</h4>
+                <p>軟體系統專案之成本、時程、範疇管控、規劃、跨部門溝通，熟悉Axture RP、Google Analytics。</p>
+              </figcaption>
             </li>
           </ul>
         </section>
       </article>
       <!-- == WORKS =====-->
-      <article class="main-wrap" id="works">
-        <section>
+      <article id="works">
+        <section class="main-wrap">
           <h3>Works</h3>
+          <ul>
+            <li class="work-content">
+              <figure><img src="assets/img/sinyi.png"/></figure>
+              <figcaption>
+                <div class="title">
+                  <h4>悠遊卡記名網站改版</h4>
+                  <div class="data">2019</div>
+                </div>
+                <p>網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。</p>
+              </figcaption>
+            </li>
+            <li class="work-content">
+              <figure><img src="assets/img/kv.jpg"/></figure>
+              <figcaption>
+                <div class="title">
+                  <h4>悠遊卡記名網站改版</h4>
+                  <div class="data">2019</div>
+                </div>
+                <p>網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。</p>
+              </figcaption>
+            </li>
+            <li class="work-content">
+              <figure><img src="assets/img/sinyi.png"/></figure>
+              <figcaption>
+                <div class="title">
+                  <h4>悠遊卡記名網站改版</h4>
+                  <div class="data">2019</div>
+                </div>
+                <p>網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。</p>
+              </figcaption>
+            </li>
+            <li class="work-content">
+              <figure><img src="assets/img/相對與絕對定位說明.jpg"/></figure>
+              <figcaption>
+                <div class="title">
+                  <h4>悠遊卡記名網站改版</h4>
+                  <div class="data">2019</div>
+                </div>
+                <p>網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。</p>
+              </figcaption>
+            </li>
+            <li class="work-content">
+              <figure><img src="assets/img/01.jpg"/></figure>
+              <figcaption>
+                <div class="title">
+                  <h4>悠遊卡記名網站改版</h4>
+                  <div class="data">2019</div>
+                </div>
+                <p>網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。</p>
+              </figcaption>
+            </li>
+            <li class="work-content">
+              <figure><img src="assets/img/02.jpg"/></figure>
+              <figcaption>
+                <div class="title">
+                  <h4>悠遊卡記名網站改版</h4>
+                  <div class="data">2019</div>
+                </div>
+                <p>網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。</p>
+              </figcaption>
+            </li>
+            <li class="work-content">
+              <figure><img src="assets/img/sinyi.png"/></figure>
+              <figcaption>
+                <div class="title">
+                  <h4>悠遊卡記名網站改版</h4>
+                  <div class="data">2019</div>
+                </div>
+                <p>網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。</p>
+              </figcaption>
+            </li>
+          </ul>
         </section>
       </article>
     </main>

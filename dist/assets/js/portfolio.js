@@ -1,36 +1,50 @@
 $(function () {
+
+  // == 主選單按鈕 ====
   $('.btn-menu').on('click',function () {
-    if(!$(this).hasClass('opened')){
-      $('nav').css('display','block');
-      $(this).addClass('opened');
+    if(!$('header').hasClass('opened')){
+      $('nav').addClass('opened');
+      $('header').addClass('opened');
+      $('body').css('position','fixed');
     }else {
-      $('nav').css('display','none');
-      $(this).removeClass('opened');
+      $('nav').removeClass('opened');
+      $('header').removeClass('opened');
+      $('body').css('position','relative')
     }
   });
 
-  // resize 設定計時器處理
-  var resizeTimer = null;
-  $(window).on('resize', function() {
-    if (resizeTimer) {
-      clearTimeout(resizeTimer)
+  // == resize 設定計時器處理 ====
+  // var resizeTimer = null;
+  // $(window).on('resize', function() {
+  //   if (resizeTimer) {
+  //     clearTimeout(resizeTimer)
+  //   }
+  //   resizeTimer = setTimeout(function(){
+  //
+  //     //== resize function START====
+  //     // console.log($(window).innerWidth());
+  //     if($(window).innerWidth() < 1024){
+  //       $('nav').removeClass('opened');
+  //       $('header').removeClass('opened');
+  //     }else{
+  //       // $('nav').css('display','block');
+  //     }
+  //     //== resize function END====
+  //
+  //   }, 300);
+  // });
+
+  // == 主選單固定top
+  $(window).on('scroll',function () {
+    var bodyTop = $(window).scrollTop();
+    if(bodyTop>0){
+      $('header').addClass('scrolled');
+    }else{
+      $('header').removeClass('scrolled');
     }
-    resizeTimer = setTimeout(function(){
-
-      //== resize function START====
-      // console.log($(window).innerWidth());
-      if($(window).innerWidth() < 1024){
-        $('nav').css('display','none');
-        $('.btn-menu').removeClass('opened');
-      }else{
-        $('nav').css('display','block');
-      }
-      //== resize function END====
-
-    }, 300);
   });
 
-  ///==  主視覺球體扭動動畫 ====
+  //==  主視覺球體扭動動畫 ====
   var randomness = 90;
   var threshold = 285;
   var anim_duration = 900; //1000 = 1s
@@ -47,6 +61,12 @@ $(function () {
 
   animate();
 
+  //== 主選單錨點，點選收合
+  $('nav').on('click',function () {
+    $('nav').removeClass('opened');
+    $('header').removeClass('opened');
+    $('body').css('position','relative')
 
+  })
 
 });

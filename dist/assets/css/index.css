@@ -36,6 +36,7 @@
  **
  ** */
 #main {
+  overflow: hidden;
   padding-top: 12px;
 }
 
@@ -143,6 +144,10 @@
   }
 }
 
+#about {
+  padding-top: 120px;
+}
+
 #about .bg-cat {
   position: absolute;
   top: -160px;
@@ -222,44 +227,127 @@
   }
 }
 
+#skills {
+  background-color: #131820;
+  padding: 60px 0;
+}
+
 #skills ul {
   max-width: 800px;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 #skills ul li.skill-content {
-  width: 100%;
-  padding: 24px 60px;
-}
-
-#skills ul li img {
+  max-width: 480px;
   display: block;
-  width: 160px;
-  height: auto;
+  width: 100%;
+  padding: 24px 20px;
   margin: 0 auto;
 }
 
-#skills ul li .des {
-  display: block;
-  margin: 12px auto 12px auto;
+#skills ul li figure {
+  display: inline-block;
+  width: 110px;
+  height: auto;
+  margin: 0 auto;
+  vertical-align: top;
+}
+
+#skills ul li figure img {
+  width: 100%;
+}
+
+#skills ul li figcaption {
+  display: inline-block;
+  margin-left: 16px;
+  width: calc(100% - 156px);
   text-align: center;
+}
+
+#skills ul li p {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 @media screen and (min-width: 768px) {
   #skills ul li.skill-content {
-    float: left;
-    width: 50%;
-    padding: 24px 20px;
-  }
-  #skills ul li img {
     display: inline-block;
-    width: 110px;
+    vertical-align: top;
+    width: calc(50% - 2px);
+    padding: 24px 20px 24px 0;
+  }
+  #skills ul li.skill-content:nth-of-type(odd) {
+    padding: 24px 0 24px 20px;
+  }
+  #skills ul li figure {
+    display: inline-block;
     height: auto;
   }
-  #skills ul li .des {
+  #skills ul li figcaption {
     display: inline-block;
-    margin-left: 12px;
+    margin-left: 24px;
   }
+}
+
+#works {
+  padding: 60px 0;
+}
+
+#works ul {
+  margin: 0 auto;
+  padding-top: 40px;
+  max-width: 1040px;
+  width: 100%;
+  column-count: 2;
+  column-width: 340px;
+  column-gap: 20px;
+}
+
+#works ul li.work-content {
+  break-inside: avoid;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #131820;
+  margin: 24px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+#works ul li.work-content:first-of-type {
+  margin-top: 0;
+}
+
+#works ul li figure {
+  display: block;
+  margin: 0 auto;
+  vertical-align: top;
+}
+
+#works ul li figure img {
+  width: 100%;
+}
+
+#works ul li figcaption {
+  display: block;
+  text-align: center;
+  padding: 8px 16px 24px 16px;
+}
+
+#works ul li figcaption .data {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #76e2e5;
+}
+
+#works ul li p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#works ul li h4 {
+  color: #FFF;
+  padding-right: 50px;
 }
 
 /**
