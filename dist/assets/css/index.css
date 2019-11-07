@@ -107,7 +107,7 @@
 }
 
 #main .explore p {
-  color: #76e2e5;
+  color: #59d7e5;
   font-size: 0.75rem;
 }
 
@@ -172,16 +172,16 @@
 }
 
 #about .intro p {
-  font-size: 1.2rem;
-  line-height: 2rem;
-  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  font-weight: 300;
   text-align: center;
-  color: rgba(255, 255, 255, 0.8);
+  color: #D6D6D6;
   padding-bottom: 16px;
 }
 
 #about .intro .highlight {
-  color: #76e2e5;
+  color: #59d7e5;
   padding: 0 8px;
 }
 
@@ -266,7 +266,7 @@
 }
 
 #skills ul li p {
-  color: rgba(255, 255, 255, 0.6);
+  color: #A1A1A1;
 }
 
 @media screen and (min-width: 768px) {
@@ -274,10 +274,10 @@
     display: inline-block;
     vertical-align: top;
     width: calc(50% - 2px);
-    padding: 24px 20px 24px 0;
+    padding: 24px 0;
   }
   #skills ul li.skill-content:nth-of-type(odd) {
-    padding: 24px 0 24px 20px;
+    padding: 24px 0 0;
   }
   #skills ul li figure {
     display: inline-block;
@@ -338,11 +338,11 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  color: #76e2e5;
+  color: #59d7e5;
 }
 
 #works ul li p {
-  color: rgba(255, 255, 255, 0.6);
+  color: #A1A1A1;
 }
 
 #works ul li h4 {

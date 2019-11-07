@@ -21,10 +21,11 @@
  *----------------------------------------------------------------------------- */
 /* +Breakpoint
  **---------------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans|Roboto&display=swap");
 html, body {
   background-color: #273040;
-  color: #76e2e5;
-  font-family: "微軟正黑體", 'sans-serif';
+  color: #59d7e5;
+  font-family: 'Roboto', 'Noto Sans TC', "微軟正黑體", "黑體-繁", "微软雅黑", 'sans-serif';
   font-size: 16px;
 }
 
