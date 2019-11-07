@@ -176,7 +176,7 @@
   line-height: 2.25rem;
   font-weight: 300;
   text-align: center;
-  color: #D6D6D6;
+  color: rgba(255, 255, 255, 0.8);
   padding-bottom: 16px;
 }
 
@@ -266,7 +266,7 @@
 }
 
 #skills ul li p {
-  color: #A1A1A1;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 @media screen and (min-width: 768px) {
@@ -342,7 +342,7 @@
 }
 
 #works ul li p {
-  color: #A1A1A1;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 #works ul li h4 {
