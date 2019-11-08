@@ -44,7 +44,7 @@
   position: relative;
   left: 50%;
   transform: translateX(-48%);
-  height: 540px;
+  height: 520px;
   background-image: url("../img/bg-circles.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -58,12 +58,12 @@
   top: 90px;
   left: 0;
   width: 100%;
-  height: 600px;
+  height: 650px;
 }
 
 #main .circle-block .bg-lines {
   width: 100%;
-  height: 600px;
+  height: 260px;
   background-image: url("../img/bg-lines.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -91,8 +91,8 @@
 }
 
 #main .explore {
-  position: relative;
-  top: -90px;
+  position: absolute;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   display: inline-block;
@@ -163,12 +163,29 @@
 }
 
 #about .intro {
+  position: relative;
   max-width: 660px;
   padding: 24px 40px 40px 40px;
   border: solid 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.6);
   margin: 140px auto 80px auto;
   background-color: #273040;
+}
+
+#about .intro .text-wrapper {
+  position: relative;
+  display: block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+  margin: 16px 0 24px 0;
+}
+
+#about .intro .letter {
+  display: inline-block;
+  line-height: 1em;
+  translateY: ["1.65em", 0];
 }
 
 #about .intro p {
@@ -212,6 +229,9 @@
     top: -210px;
     width: 360px;
     height: 400px;
+  }
+  #about .intro .text-wrapper {
+    margin: 32px 0 28px 0;
   }
   #about .intro .hand {
     width: 46px;

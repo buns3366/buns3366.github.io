@@ -34,9 +34,12 @@ $(function () {
   //   }, 300);
   // });
 
-  // == 主選單固定top
+  // == 滾動視窗偵測事件 ====
   $(window).on('scroll',function () {
     var bodyTop = $(window).scrollTop();
+    // console.log(bodyTop);
+
+    //--主選單固定 ----
     if(bodyTop>0){
       $('header').addClass('scrolled');
     }else{
@@ -44,29 +47,13 @@ $(function () {
     }
   });
 
-  //==  主視覺球體扭動動畫 ====
-  var randomness = 90;
-  var threshold = 285;
-  var anim_duration = 900; //1000 = 1s
-
-  animate = function() {
-
-    $('.fluid').animate({
-      borderTopLeftRadius: String(Math.round((Math.random() * randomness + threshold)) + 'px'),
-      borderTopRightRadius: String(Math.round((Math.random() * randomness + threshold)) + 'px'),
-      borderBottomLeftRadius: String(Math.round((Math.random() * randomness + threshold)) + 'px'),
-      borderBottomRightRadius: String(Math.round((Math.random() * randomness + threshold)) + 'px')
-    }, anim_duration, animate);
-  };
-
-  animate();
-
   //== 主選單錨點，點選收合
   $('nav').on('click',function () {
     $('nav').removeClass('opened');
     $('header').removeClass('opened');
     $('body').css('position','relative')
 
-  })
+  });
+
 
 });

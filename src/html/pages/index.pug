@@ -4,6 +4,7 @@ block vars
 
 block pages-css
   link(rel='stylesheet', href='assets/css/index.css')
+  link(rel='stylesheet', href='assets/css/module/animate.css')
 
 
 block content
@@ -27,9 +28,12 @@ block content
       section.main-wrap
         .bg-cat
         .intro
-          h2 Hello,I am Sinyi
-          p I was a product and project manager in online website, EC, O2O service,mobile App, RTLS solution. Have interest in web technologies, user experience and product planning.
-          p Seeking a career as
+          .text-wrapper
+            h2.letters Hello,I am Sinyi
+          p.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.8s")
+            | I was a product and project manager in online website, EC, O2O service,mobile App, RTLS solution. Have interest in web technologies, user experience and product planning.
+          p.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.8s")
+            | Seeking a career as
             span.highlight Front-end Developer
             | .
           .hand.hand-l
@@ -38,94 +42,100 @@ block content
     // == SKILLS =====
     article#skills.skills
       section.main-wrap
-        h3 Skills
+        h3.wow.slideInUp(data-wow-duration="1s" data-wow-delay="0.5s")
+          | Skills
         ul
           li.skill-content
-            figure
+            figure.wow.bounceIn(data-wow-duration="1s" data-wow-delay="0.5s")
               img(src='assets/img/icon-html.svg')
-            figcaption
+            figcaption.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
               h4 HTML
               p Pug/ Semantic Elements
           li.skill-content
-            figure
+            figure.wow.bounceIn(data-wow-duration="1s" data-wow-delay="0.5s")
               img(src='assets/img/icon-css.svg')
-            figcaption
+            figcaption.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
               h4 CSS
               p Sass (Pre-processors) /
               p Bootstrap/
               p Media Query (RWD)/ Hack
           li.skill-content
-            figure
+            figure.wow.bounceIn(data-wow-duration="1s" data-wow-delay="0.5s")
               img(src='assets/img/icon-js.svg')
-            figcaption
+            figcaption.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
               h4 Javascript
               p JQuery/ VueJS/ AJAX
           li.skill-content
-            figure
+            figure.wow.bounceIn(data-wow-duration="1s" data-wow-delay="0.5s")
               img(src='assets/img/icon-git.svg')
-            figcaption
+            figcaption.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
               h4 Git
               p Version control/ Branch Manage
           li.skill-content
-            figure
+            figure.wow.bounceIn(data-wow-duration="1s" data-wow-delay="0.5s")
               img(src='assets/img/icon-design.svg')
-            figcaption
+            figcaption.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
               h4 Design
               p CI/UI/UX design
               p Software: Adobe Photoshop/ Adobe Illustrator
           li.skill-content
-            figure
+            figure.wow.bounceIn(data-wow-duration="1s" data-wow-delay="0.5s")
               img(src='assets/img/icon-plan.svg')
-            figcaption
+            figcaption.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
               h4 Project manage/ Plan
               p Product development/ Project management/ Software planning
               p Sofeware: Microsoft Office/ Axture RP/ Google Analytics
     // == WORKS =====
     article#works
       section.main-wrap
-        h3  Work Collection
+        h3.wow.slideInUp(data-wow-duration="1s" data-wow-delay="0.5s")
+          | Work Collection
         ul
-          li.work-content
+          li.work-content.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
             figure
               img(src='assets/img/work-3.jpg')
             figcaption
               .title
                 h4 雅詩蘭黛-雙11活動網頁
                 .data 2019
-              p 網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。
-          li.work-content
+              p 雅詩蘭黛雙11活動，負責網頁切版，使用JQuery/ Pug/ Sass製作網頁。
+          li.work-content.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
             figure
               img(src='assets/img/work-4.jpg')
             figcaption
               .title
                 h4 危老都更博覽會網站
                 .data 2019
-              p 網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。
-          li.work-content
+              p 第一屆危老都更博覽會網站，負責網站切版(協作)，使用JQuery/ Bootsratp/ Pug/ Sass。
+          li.work-content.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
             figure
               img(src='assets/img/work-1-1.jpg')
             figcaption
               .title
                 h4 悠遊卡記名網站
                 .data 2019
-              p 網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。
-          li.work-content
+              p 網站改版，負責網頁全站切版，使用JQuery/ Bootsratp/ Pug/ Sass，表單使用Javascript驗證。
+          li.work-content.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
             figure
               img(src='assets/img/work-5-1.jpg')
             figcaption
               .title
-                h4 商業週刊-APP AD
+                h4 商業週刊-APP介紹網頁
                 .data 2019
-              p 網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。
-          li.work-content
+              p 商業週刊APP介紹與宣傳網頁，負責網頁切版，使用JQuery/ Bootsratp/ Pug/ Sass，Javascript製作動態效果。
+          li.work-content.wow.fadeInUp(data-wow-duration="1s" data-wow-delay="0.5s")
             figure
               img(src='assets/img/work-2.jpg')
             figcaption
               .title
                 h4 商業周刊官方網站
                 .data 2019
-              p 網站改版，負責網頁全站切版，使用JQuery與Bootsratp，表單使用Javascript驗證。
+              p 商業周刊官方網站網站改版，負責網頁全站切版(協作)，使用JQuery/ Bootsratp/ Pug/ Sass，Javascript製作動態效果。
 
 
 block pages-js
-  //script(src='assets/js/portfolio.js')
+  script(src='assets/js/module/anime.min.js')
+  script(src='assets/js/module/wow.min.js')
+  script(src='assets/js/portfolio-index.js')
+
+
