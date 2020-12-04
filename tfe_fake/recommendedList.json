@@ -1,0 +1,19 @@
+{
+    "recommendedList":[
+        {
+            "feedbackPhoto":"https://api.url/userImg1.jpg",
+            "feedbackContentText":"若急⽤錢⼜⼀時標不到怎麼辦？<br>透過TFE的「主動拍賣區」很快就可解決啊！",
+            "feedbackContentfrom":"吳東隆／29歲／⾼雄中鋼技術員"
+        },
+        {
+            "feedbackPhoto":"https://api.url/userImg2.jpg",
+            "feedbackContentText":"TFE徵授信部⾨風險控管的不錯，違約率控制在0.3%，算是很好的，不比銀⾏差",
+            "feedbackContentfrom":"張裕⺠／46歲／證券公司業務主管"
+        },
+        {
+            "feedbackPhoto":"https://api.url/userImg3.jpg",
+            "feedbackContentText":"在違約率及投資報酬率等管理下，TFE是⼀個值得信賴的地⽅",
+            "feedbackContentfrom":"LD／31歲／⾏政管理"
+        }
+    ]
+   }
