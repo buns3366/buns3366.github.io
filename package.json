@@ -26,7 +26,7 @@
   "homepage": "https://github.com/buns3366/buns3366.github.io#readme",
   "dependencies": {
     "html-loader": "^0.5.5",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-cli": "^1.0.0-alpha6",
     "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.4.0"
